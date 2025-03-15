@@ -1,59 +1,27 @@
-import React from "react";
-import Image from "next/image";
-import { FaChevronDown } from "react-icons/fa";
+"use client";
 
-const NavigationBar = () => {
-  const navItems = [
-    {
-      item: "home",
-      link: "/",
-      hasDropdown: true,
-      children: [],
-    },
-    {
-      item: "pages",
-      link: "/",
-      hasDropdown: true,
-      children: [],
-    },
-    {
-      item: "projects",
-      link: "/",
-      hasDropdown: true,
-      children: [],
-    },
-    {
-      item: "blog",
-      link: "/",
-      hasDropdown: true,
-      children: [],
-    },
-    {
-      item: "shop",
-      link: "/",
-      hasDropdown: true,
-      children: [],
-    },
-    {
-      item: "contact",
-      link: "/",
-      hasDropdown: false,
-      children: [],
-    },
-  ];
+import { useState } from "react";
+import Image from "next/image";
+import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
+
+const navItems = [
+  { item: "Home", hasDropdown: true },
+  { item: "About", hasDropdown: true },
+  { item: "Services", hasDropdown: true },
+  { item: "Contact", hasDropdown: false },
+];
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-white">
-      <div className="container bg-white flex justify-between mx-auto py-2">
-        <div>
-          <Image
-            src="/Logo.png"
-            alt="Logo"
-            width={146 * 0.6}
-            height={32 * 0.6}
-          />
-        </div>
-        <div className="flex gap-10 text-black">
+    <nav className="bg-white shadow-md">
+      <div className="container mx-auto flex justify-between items-center py-4 px-6">
+        {/* Logo */}
+        <Image src="/Logo.png" alt="Logo" width={146 * 0.6} height={32 * 0.6} />
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex gap-10 text-black">
           {navItems.map((nav) => (
             <div
               key={nav.item}
@@ -66,9 +34,29 @@ const NavigationBar = () => {
             </div>
           ))}
         </div>
-      </div>
-    </div>
-  );
-};
 
-export default NavigationBar;
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-black text-2xl"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="md:hidden bg-white py-4 px-6 border-t text-black">
+          {navItems.map((nav) => (
+            <div
+              key={nav.item}
+              className="flex justify-between items-center py-2 cursor-pointer"
+            >
+              {nav.item}
+            </div>
+          ))}
+        </div>
+      )}
+    </nav>
+  );
+}
