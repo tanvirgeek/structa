@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-secondary-dark: var(--secondary-dark);
+  --color-background: var(--background);
+  --color-background-soft: var(--background-soft);
+  --color-background-muted: var(--background-muted);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --font-poppins: var(--font-poppins, "Poppins", sans-serif);
+  --font-geist: var(--font-geist, "Geist", sans-serif);
+}
+
 :root {
   /* === Light Theme (Default) === */
   --background: #ffffff; /* Pure White */
@@ -44,12 +59,12 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans);
+  font-family: var(--font-poppins);
 }
 
 /* === Custom Tailwind Utility Classes === */
+/*
 @layer utilities {
-  /* Text Colors */
   .text-primary {
     color: var(--primary);
   }
@@ -72,7 +87,6 @@ body {
     color: var(--foreground-muted);
   }
 
-  /* Background Colors */
   .bg-primary {
     background-color: var(--primary);
   }
@@ -98,7 +112,6 @@ body {
     background-color: var(--background-muted);
   }
 
-  /* Font Families */
   .font-sans {
     font-family: var(--font-sans);
   }
@@ -106,3 +119,4 @@ body {
     font-family: var(--font-mono);
   }
 }
+*/

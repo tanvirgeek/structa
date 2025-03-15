@@ -41,7 +41,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-black text-2xl"
+          className="md:hidden text-foreground text-2xl"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <FaTimes /> : <FaBars />}
@@ -50,7 +50,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-white py-4 px-6 border-t text-black">
+        <div className="md:hidden bg-white py-4 px-6 border-t text-foreground">
           {navItems.map((nav) => (
             <Link
               key={nav.item}
