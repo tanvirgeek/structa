@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* === Light Theme (Default) === */
+  --background: #ffffff; /* Pure White */
+  --background-soft: #f9f9f9; /* Slightly Off-White */
+  --background-muted: #f3f3f3; /* Light Grayish White */
+
+  --foreground: #171717; /* Dark Text */
+  --foreground-muted: #444444; /* Slightly Softer Dark Text */
+
+  --primary: #f97316; /* Orange-500 */
+  --primary-dark: #c2410c; /* Orange-700 */
+  --primary-light: #ffedd5; /* Light Orange (Orange-100) */
+
+  --secondary: #ff5722; /* Deep Orange */
+  --secondary-dark: #bf360c; /* Darker Deep Orange */
+
+  --font-sans: var(--font-geist-sans, "Inter", sans-serif);
+  --font-mono: var(--font-geist-mono, "Courier New", monospace);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* === Dark Theme (Overwrites Defaults) === */
+/*
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #0a0a0a; 
+    --background-soft: #1a1a1a;
+    --background-muted: #292929;
+
     --foreground: #ededed;
+    --foreground-muted: #bdbdbd;
+
+    --primary: #ff6d00;
+    --primary-dark: #ff3d00;
+    --primary-light: #ffcc80;
+
+    --secondary: #ff8f00;
+    --secondary-dark: #ff6d00;
   }
 }
+*/
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* === Custom Tailwind Utility Classes === */
+@layer utilities {
+  /* Text Colors */
+  .text-primary {
+    color: var(--primary);
+  }
+  .text-primary-dark {
+    color: var(--primary-dark);
+  }
+  .text-primary-light {
+    color: var(--primary-light);
+  }
+  .text-secondary {
+    color: var(--secondary);
+  }
+  .text-secondary-dark {
+    color: var(--secondary-dark);
+  }
+  .text-foreground {
+    color: var(--foreground);
+  }
+  .text-foreground-muted {
+    color: var(--foreground-muted);
+  }
+
+  /* Background Colors */
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  .bg-primary-dark {
+    background-color: var(--primary-dark);
+  }
+  .bg-primary-light {
+    background-color: var(--primary-light);
+  }
+  .bg-secondary {
+    background-color: var(--secondary);
+  }
+  .bg-secondary-dark {
+    background-color: var(--secondary-dark);
+  }
+  .bg-background {
+    background-color: var(--background);
+  }
+  .bg-background-soft {
+    background-color: var(--background-soft);
+  }
+  .bg-background-muted {
+    background-color: var(--background-muted);
+  }
+
+  /* Font Families */
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
 }
