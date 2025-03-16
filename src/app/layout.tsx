@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Poppins, Geist } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "@/components/NavigationBar";
+import { Space_Grotesk, Inria_Sans } from "next/font/google";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
-  weight: ["300", "400", "700"], // Adjust weights as needed
+  weight: ["300", "400", "500", "600", "700"], // Available weights
 });
 
-const geist = Geist({
-  variable: "--font-geist",
+const inriaSans = Inria_Sans({
+  variable: "--font-inria-sans",
   subsets: ["latin"],
+  weight: ["300", "400", "700"], // Available weights
 });
 
 export const metadata: Metadata = {
@@ -26,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${geist.variable} antialiased`}>
+      <body
+        className={`${spaceGrotesk.variable} ${inriaSans.variable} antialiased`}
+      >
         <div>
           <NavigationBar />
           {children}

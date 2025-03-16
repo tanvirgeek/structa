@@ -11,8 +11,8 @@
   --color-background-muted: var(--background-muted);
   --color-foreground: var(--foreground);
   --color-foreground-muted: var(--foreground-muted);
-  --font-poppins: var(--font-poppins, "Poppins", sans-serif);
-  --font-geist: var(--font-geist, "Geist", sans-serif);
+  --font-sans: var(--font-space-grotesk, "Space Grotesk", sans-serif);
+  --font-mono: var(--font-inria-sans, "Inria Sans", sans-serif);
 }
 
 :root {
@@ -30,9 +30,6 @@
 
   --secondary: #ff5722; /* Deep Orange */
   --secondary-dark: #bf360c; /* Darker Deep Orange */
-
-  --font-sans: var(--font-geist-sans, "Inter", sans-serif);
-  --font-mono: var(--font-geist-mono, "Courier New", monospace);
 }
 
 /* === Dark Theme (Overwrites Defaults) === */

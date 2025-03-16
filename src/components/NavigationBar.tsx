@@ -27,7 +27,7 @@ export default function Navbar() {
           {navItems.map((nav) => (
             <Link
               key={nav.item}
-              className="flex gap-1 items-center cursor-pointer"
+              className="flex gap-1 items-center cursor-pointer font-mono"
               href={"/"}
             >
               {nav.item}
@@ -36,7 +36,7 @@ export default function Navbar() {
               )}
             </Link>
           ))}
-          <Button text="Get Quote" />
+          <Button text="Get a Quote" />
         </div>
 
         {/* Mobile Menu Button */}

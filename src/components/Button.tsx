@@ -9,7 +9,7 @@ const Button = ({ text, onClick }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
-      className="relative flex items-center gap-2 px-6 py-3 text-white bg-primary rounded-lg font-medium transition-all duration-300 hover:bg-green-800 cursor-pointer"
+      className="relative flex items-center gap-2 px-6 py-3 text-white bg-primary rounded-lg font-mono font-medium transition-all duration-300 hover:bg-green-800 cursor-pointer"
     >
       {text}
 
