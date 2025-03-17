@@ -31,7 +31,9 @@ export default function RootLayout({
         className={`${spaceGrotesk.variable} ${inriaSans.variable} antialiased`}
       >
         <div>
-          <NavigationBar />
+          <div className="sticky top-0 z-50 bg-white shadow-md">
+            <NavigationBar />
+          </div>
           {children}
         </div>
       </body>
