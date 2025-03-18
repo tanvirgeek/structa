@@ -3,14 +3,14 @@ import Button from "./Button";
 import Image from "next/image";
 
 const Hero = () => {
-  const heroTextClasses = "font-sans font-bold text-5xl uppercase";
   return (
     <div className="h-[500px] md:h-[800px] bg-[url('/Hero.png')] bg-cover bg-center">
-      <div className="container mx-auto pt-20 pl-10 flex flex-col gap-3">
+      <div className="container mx-auto pt-20 flex flex-col gap-3 px-4 md:px-0">
         <div>
-          <p className={heroTextClasses}>Build Your</p>
-          <p className={heroTextClasses}>Dream House</p>
-          <p className={heroTextClasses}>Today</p>
+          <h1>
+            Build Your <br /> Dream House <br />
+            Today
+          </h1>
         </div>
 
         <p className="w-1/2">

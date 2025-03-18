@@ -59,61 +59,27 @@ body {
   font-family: var(--font-poppins);
 }
 
+h1 {
+  @apply font-sans text-foreground font-bold text-5xl uppercase;
+}
+
+h2 {
+  @apply font-sans text-foreground font-bold text-3xl uppercase;
+}
+
+h6 {
+  @apply font-sans text-foreground font-bold uppercase;
+}
+
 /* === Custom Tailwind Utility Classes === */
-/*
+
 @layer utilities {
-  .text-primary {
-    color: var(--primary);
-  }
-  .text-primary-dark {
-    color: var(--primary-dark);
-  }
-  .text-primary-light {
-    color: var(--primary-light);
-  }
-  .text-secondary {
-    color: var(--secondary);
-  }
-  .text-secondary-dark {
-    color: var(--secondary-dark);
-  }
-  .text-foreground {
-    color: var(--foreground);
-  }
-  .text-foreground-muted {
-    color: var(--foreground-muted);
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
   }
 
-  .bg-primary {
-    background-color: var(--primary);
-  }
-  .bg-primary-dark {
-    background-color: var(--primary-dark);
-  }
-  .bg-primary-light {
-    background-color: var(--primary-light);
-  }
-  .bg-secondary {
-    background-color: var(--secondary);
-  }
-  .bg-secondary-dark {
-    background-color: var(--secondary-dark);
-  }
-  .bg-background {
-    background-color: var(--background);
-  }
-  .bg-background-soft {
-    background-color: var(--background-soft);
-  }
-  .bg-background-muted {
-    background-color: var(--background-muted);
-  }
-
-  .font-sans {
-    font-family: var(--font-sans);
-  }
-  .font-mono {
-    font-family: var(--font-mono);
+  /* Hide scrollbar for Firefox */
+  .scrollbar-hidden {
+    scrollbar-width: none;
   }
 }
-*/
