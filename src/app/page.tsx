@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import TotalProjects from "@/components/TotalProjects";
 import VisionMission from "@/components/VisionMission";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <VisionMission />
       <TotalProjects />
       <FeaturedProjects />
+      <WhyChooseUs />
     </div>
   );
 }

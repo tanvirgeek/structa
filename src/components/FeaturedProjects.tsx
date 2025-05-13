@@ -4,50 +4,24 @@ import FeaturedProject from "./FeaturedProject";
 
 const featuredProjects = [
   {
-    imageSrc: "/construction.png",
-    title: "Construction",
+    imageSrc: "/project1.png",
+    title: "North Carolina Centre",
+    description: "Building, Renovation",
+  },
+  {
+    imageSrc: "/project2.png",
+    title: "Tranquil Heights Homes",
     description:
       "Offering comprehensive architectural services including conceptual design, drafting",
   },
   {
-    imageSrc: "/arch.png",
-    title: "Architecture",
-    description:
-      "Offering comprehensive architectural services including conceptual design, drafting",
+    imageSrc: "/project1.png",
+    title: "North Carolina Centre",
+    description: "Building, Renovation",
   },
   {
-    imageSrc: "/construction.png",
-    title: "Construction",
-    description:
-      "Offering comprehensive architectural services including conceptual design, drafting",
-  },
-  {
-    imageSrc: "/arch.png",
-    title: "Architecture",
-    description:
-      "Offering comprehensive architectural services including conceptual design, drafting",
-  },
-  {
-    imageSrc: "/construction.png",
-    title: "Construction",
-    description:
-      "Offering comprehensive architectural services including conceptual design, drafting",
-  },
-  {
-    imageSrc: "/arch.png",
-    title: "Architecture",
-    description:
-      "Offering comprehensive architectural services including conceptual design, drafting",
-  },
-  {
-    imageSrc: "/construction.png",
-    title: "Construction",
-    description:
-      "Offering comprehensive architectural services including conceptual design, drafting",
-  },
-  {
-    imageSrc: "/arch.png",
-    title: "Architecture",
+    imageSrc: "/project2.png",
+    title: "Tranquil Heights Homes",
     description:
       "Offering comprehensive architectural services including conceptual design, drafting",
   },
@@ -73,7 +47,7 @@ const FeaturedProjects = () => {
             {featuredProjects.map((item, index) => (
               <div
                 key={index}
-                className="min-w-[280px] max-w-[320px] flex-shrink-0"
+                className="min-w-[320px] flex-shrink-0"
               >
                 <FeaturedProject
                   imageSrc={item.imageSrc}

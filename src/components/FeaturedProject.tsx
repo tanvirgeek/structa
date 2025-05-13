@@ -13,12 +13,12 @@ const FeaturedProject: React.FC<FeaturedProps> = ({
   description,
 }) => {
   return (
-    <div>
+    <div className="max-w-[320px]">
       <Image
         src={imageSrc}
         alt="Image"
-        width={90}
-        height={90}
+        width={320}
+        height={320}
         className="pb-14"
       />
       <h5 className="uppercase font-sans font-bold mb-3">{title}</h5>
