@@ -18,7 +18,7 @@
 :root {
   /* === Light Theme (Default) === */
   --background: #ffffff; /* Pure White */
-  --background-soft: #f9f9f9; /* Slightly Off-White */
+  --background-soft: #f6f6f6; /* Slightly Off-White */
   --background-muted: #f3f3f3; /* Light Grayish White */
 
   --foreground: #171717; /* Dark Text */

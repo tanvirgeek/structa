@@ -1,3 +1,4 @@
+import BlogPosts from "@/components/BlogPosts";
 import Commitment from "@/components/Commitment";
 import ExpertTeam from "@/components/ExpertTeam";
 import FeaturedProjects from "@/components/FeaturedProjects";
@@ -18,6 +19,7 @@ export default function Home() {
       <FeaturedProjects />
       <WhyChooseUs />
       <ExpertTeam />
+      <BlogPosts />
     </div>
   );
 }

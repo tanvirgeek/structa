@@ -1,0 +1,88 @@
+import Link from "next/link";
+import React from "react";
+import Image from "next/image";
+
+// Blog data
+const blogs = [
+  {
+    id: 1,
+    title: "AI and Robotics Reshape Modern Construction Sites",
+    category: "Technology",
+    date: "May 10, 2025",
+    imageUrl: "/blog1.png",
+  },
+  {
+    id: 2,
+    title: "Sustainable Materials Leading the Future of Buildings",
+    category: "Sustainability",
+    date: "May 5, 2025",
+    imageUrl: "/blog2.png",
+  },
+  {
+    id: 3,
+    title: "Top 10 Smart Building Trends in 2025",
+    category: "Innovation",
+    date: "April 28, 2025",
+    imageUrl: "/blog1.png",
+  },
+  {
+    id: 4,
+    title: "How 3D Printing is Revolutionizing Housing Construction",
+    category: "Construction Tech",
+    date: "April 20, 2025",
+    imageUrl: "/blog2.png",
+  },
+  {
+    id: 5,
+    title: "Modular Construction: Faster, Greener, Smarter",
+    category: "Architecture",
+    date: "April 15, 2025",
+    imageUrl: "/blog1.png",
+  },
+];
+
+const BlogPosts = () => {
+  return (
+    <div className="bg-background-soft">
+      <div className="container mx-auto pt-5 md:pt-20 flex flex-col gap-6 px-4 md:px-0">
+        <div className="flex justify-between items-start">
+          <div>
+            <h6>Blog Posts</h6>
+            <h1 className="text-2xl font-bold">Our Latest News</h1>
+          </div>
+          <Link href={"/"} className="self-end underline text-sm">
+            view all blogs
+          </Link>
+        </div>
+
+        {/* Blog List */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {blogs.map((blog) => (
+            <div
+              key={blog.id}
+              className="bg-white rounded-xl overflow-hidden shadow-sm"
+            >
+              <Image
+                src={blog.imageUrl}
+                alt={blog.title}
+                width={500}
+                height={300}
+                className="w-full h-56 object-cover"
+              />
+              <div className="p-4">
+                <div className="flex justify-between text-sm text-muted-foreground">
+                  <span className="text-primary">{blog.category}</span>
+                  <span>{blog.date}</span>
+                </div>
+                <hr className="my-2 border-muted" />
+                <h2 className="text-lg font-semibold">{blog.title}</h2>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BlogPosts;
