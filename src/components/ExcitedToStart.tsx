@@ -18,7 +18,9 @@ const ExcitedToStart = () => {
         <h1 className="text-4xl font-semibold mb-4 text-white!">
           Next Construct?
         </h1>
-        <Button text={"Get A Quote"} />
+        <div className="flex justify-center">
+          <Button text={"Get A Quote"} />
+        </div>
       </div>
     </div>
   );

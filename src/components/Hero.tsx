@@ -17,11 +17,11 @@ const Hero = () => {
           Your trusted partner in construction from innovative designs to expert
           project management deliver excellence.
         </p>
-        <div className="flex gap-4">
+        <div className="flex flex-col md:flex-row gap-4">
           <Button text="Get a Quote" />
           <Button text="Our Work" />
         </div>
-        <div className="pt-20">
+        <div className="py-5 md:py-0 md:pt-20">
           <div className="relative w-32 h-12">
             <Image
               src="/profile1.png"

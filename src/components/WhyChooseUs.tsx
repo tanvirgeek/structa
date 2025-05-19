@@ -5,13 +5,13 @@ import TestimonialSlider from "./TestimonialSlider";
 const WhyChooseUs = () => {
   return (
     <div>
-      <div className="container flex mx-auto pt-5 md:pt-20 flex-col md:flex-row gap-3 px-4 md:px-0 justify-between">
+      <div className="container flex mx-auto pt-5 md:pt-20 flex-col md:flex-row gap-10 md:gap-3 px-4 md:px-0 justify-between">
         <div>
           <h6>why choose us</h6>
           <h1>Where trust</h1>
           <h1>meets excellence</h1>
         </div>
-        <div className="w-[50%]">
+        <div className="w-full md:w-[50%] pb-10">
           <ToggleDetail
             title="Quality craftsmanship"
             description="Our team of skilled professionals embraces technologies and methodologies to enhance efficiency, minimize impact optimize project outcomes. Designing, streamlining construction processes or integrating smart solutions."

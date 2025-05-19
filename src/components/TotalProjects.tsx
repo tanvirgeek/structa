@@ -3,7 +3,7 @@ import RollingNumber from "./RollingNumber";
 
 const TotalProjects = () => {
   return (
-    <div className="flex justify-center gap-20 align-middle">
+    <div className="flex flex-col md:flex-row justify-center gap-5 md:gap-20 align-middle">
       <div className="flex flex-col items-center">
         <RollingNumber target={630} />
         <h3>Engineering Experts</h3>
