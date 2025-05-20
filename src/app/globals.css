@@ -67,8 +67,12 @@ h1 {
   @apply font-sans text-foreground font-bold text-5xl uppercase;
 }
 
+.app-sub-heading {
+  @apply font-thin! text-7xl! tracking-wide! leading-24;
+}
+
 h2 {
-  @apply font-sans text-foreground font-semibold text-6xl uppercase tracking-tight;
+  @apply font-sans text-foreground font-semibold text-3xl uppercase tracking-tight;
 }
 
 h6 {

@@ -6,14 +6,12 @@ const AboutHero = () => {
     <div>
       <div className="app-section flex flex-row justify-center gap-40">
         <div>
-          <h2>
+          <h1 className="app-sub-heading">
             Crafting <br /> structures for <br /> a better future
-          </h2>
+          </h1>
           <p className="text-primary">about our structa construction company</p>
         </div>
-        <div>
-          <CircularExperts />
-        </div>
+        <CircularExperts />
       </div>
     </div>
   );
