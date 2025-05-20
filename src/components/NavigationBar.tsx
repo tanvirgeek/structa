@@ -7,10 +7,10 @@ import Link from "next/link";
 import Button from "./Button";
 
 const navItems = [
-  { item: "Home", hasDropdown: true },
-  { item: "About", hasDropdown: true },
-  { item: "Services", hasDropdown: true },
-  { item: "Contact", hasDropdown: false },
+  { item: "Home", hasDropdown: true, href: "/" },
+  { item: "About", hasDropdown: true, href: "/about" },
+  { item: "Services", hasDropdown: true, href: "/services" },
+  { item: "Contact", hasDropdown: false, href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -28,7 +28,7 @@ export default function Navbar() {
             <Link
               key={nav.item}
               className="flex gap-1 items-center cursor-pointer font-mono"
-              href={"/"}
+              href={nav.href}
             >
               {nav.item}
               {nav.hasDropdown && (
