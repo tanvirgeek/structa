@@ -58,7 +58,7 @@ export default function Navbar() {
       {mounted && (
         <div
           className={clsx(
-            "absolute top-0 left-0 w-full bg-white text-foreground shadow-md transition-transform duration-300 transform md:hidden z-40",
+            "absolute top-0 left-0 w-full bg-white text-foreground shadow-md transition-transform duration-400 transform md:hidden z-40",
             isOpen ? "translate-y-14" : "-translate-y-full"
           )}
         >
