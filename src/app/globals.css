@@ -68,7 +68,7 @@ h1 {
 }
 
 .app-sub-heading {
-  @apply font-thin! text-7xl! tracking-wide! leading-24;
+  @apply font-thin! text-5xl! md:text-7xl! tracking-wide! leading-15 md:leading-24;
 }
 
 h2 {
