@@ -58,16 +58,20 @@ export default function TeamSection() {
         {teamMembers.map((member) => (
           <div
             key={member.id}
-            className="flex-shrink-0 w-64 text-center bg-white shadow rounded-lg p-6"
+            className="flex-shrink-0 min-w-[250px] text-center bg-white shadow rounded-lg p-6"
           >
-            <Image
-              src={member.image}
-              alt={member.name}
-              width={96}
-              height={96}
-              className="rounded-full object-cover mx-auto mb-4"
-            />
-            <h3 className="text-lg font-semibold">{member.name}</h3>
+            {/* Image Container */}
+            <div className="w-full h-72 relative">
+              <Image
+                src={member.image}
+                alt={member.name}
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Name & Title */}
+            <h3 className="text-lg font-semibold mt-4">{member.name}</h3>
             <p className="text-gray-500">{member.title}</p>
           </div>
         ))}
@@ -79,14 +83,18 @@ export default function TeamSection() {
             key={member.id}
             className="text-center bg-white shadow rounded-lg p-6"
           >
-            <Image
-              src={member.image}
-              alt={member.name}
-              width={96}
-              height={96}
-              className="rounded-xl object-cover mx-auto mb-4"
-            />
-            <h3 className="text-lg font-semibold">{member.name}</h3>
+            {/* Image Container */}
+            <div className="w-full h-72 relative">
+              <Image
+                src={member.image}
+                alt={member.name}
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Name & Title */}
+            <h3 className="text-lg font-semibold mt-4">{member.name}</h3>
             <p className="text-gray-500">{member.title}</p>
           </div>
         ))}

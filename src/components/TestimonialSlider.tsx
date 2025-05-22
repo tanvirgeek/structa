@@ -40,40 +40,42 @@ export default function TestimonialSlider() {
   }, []);
 
   return (
-    <div className="w-full md:w-[70%] mx-auto p-16 bg-black text-white font-sans relative overflow-hidden">
-      <div className="relative h-72">
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            className={clsx(
-              "absolute inset-0 transition-opacity duration-700 ease-in-out",
-              current === index
-                ? "opacity-100"
-                : "opacity-0 pointer-events-none"
-            )}
-          >
-            <div>
-              <Image src="/quote.png" alt="Quote" width={80} height={80} />
+    <div className="app-section">
+      <div className="w-full md:w-[70%] mx-auto p-16 bg-black text-white font-sans relative overflow-hidden">
+        <div className="relative h-72">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className={clsx(
+                "absolute inset-0 transition-opacity duration-700 ease-in-out",
+                current === index
+                  ? "opacity-100"
+                  : "opacity-0 pointer-events-none"
+              )}
+            >
+              <div>
+                <Image src="/quote.png" alt="Quote" width={80} height={80} />
+              </div>
+              <p className="mt-4">{testimonial.text}</p>
+              <h5 className="pt-4">{testimonial.name}</h5>
+              <h5>{testimonial.title}</h5>
             </div>
-            <p className="mt-4">{testimonial.text}</p>
-            <h5 className="pt-4">{testimonial.name}</h5>
-            <h5>{testimonial.title}</h5>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      {/* Dots */}
-      <div className="flex justify-center mt-8 space-x-3">
-        {testimonials.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrent(index)}
-            className={clsx(
-              "w-3 h-3 rounded-full",
-              current === index ? "bg-white" : "bg-gray-600"
-            )}
-          />
-        ))}
+        {/* Dots */}
+        <div className="flex justify-center mt-8 space-x-3">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrent(index)}
+              className={clsx(
+                "w-3 h-3 rounded-full",
+                current === index ? "bg-white" : "bg-gray-600"
+              )}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
