@@ -1,6 +1,7 @@
 import AboutDescription from "@/components/AboutDescription";
 import AboutHero from "@/components/AboutHero";
 import AboutImage from "@/components/AboutImage";
+import AboutSlider from "@/components/ClientRecommendationSlider";
 import AboutUsMiddle from "@/components/AboutUsMiddle";
 import ExcitedToStart from "@/components/ExcitedToStart";
 import ExpertTeam from "@/components/ExpertTeam";
@@ -15,6 +16,7 @@ const About = () => {
       <AboutDescription />
       <AboutUsMiddle />
       <ExpertTeam />
+      <AboutSlider />
       <ExcitedToStart />
       <Footer />
     </div>
