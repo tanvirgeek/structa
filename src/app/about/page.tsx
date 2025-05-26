@@ -1,12 +1,13 @@
 import AboutDescription from "@/components/AboutDescription";
 import AboutHero from "@/components/AboutHero";
 import AboutImage from "@/components/AboutImage";
-import AboutSlider from "@/components/ClientRecommendationSlider";
+import ClientRecommendationSlider from "@/components/ClientRecommendationSlider";
 import AboutUsMiddle from "@/components/AboutUsMiddle";
 import ExcitedToStart from "@/components/ExcitedToStart";
 import ExpertTeam from "@/components/ExpertTeam";
 import Footer from "@/components/Footer";
 import React from "react";
+import CompanyLogoMarquee from "@/components/Companies";
 
 const About = () => {
   return (
@@ -16,7 +17,8 @@ const About = () => {
       <AboutDescription />
       <AboutUsMiddle />
       <ExpertTeam />
-      <AboutSlider />
+      <ClientRecommendationSlider />
+      <CompanyLogoMarquee />
       <ExcitedToStart />
       <Footer />
     </div>

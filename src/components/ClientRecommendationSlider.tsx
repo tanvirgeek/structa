@@ -58,7 +58,7 @@ export default function ClientRecommendationSlider() {
 
   return (
     <div className="app-section">
-      <div className="max-w-4xl mx-auto py-16 px-6 text-center">
+      <div className="max-w-4xl mx-auto px-6 text-center">
         <div
           className="relative bg-white shadow-2xl rounded-2xl px-10 py-14"
           onMouseEnter={() => setIsHovered(true)}
