@@ -20,7 +20,6 @@ const About = () => {
       <ClientRecommendationSlider />
       <CompanyLogoMarquee />
       <ExcitedToStart />
-      <Footer />
     </div>
   );
 };

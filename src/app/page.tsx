@@ -23,7 +23,6 @@ export default function Home() {
       <ExpertTeam />
       <BlogPosts />
       <ExcitedToStart />
-      <Footer />
     </div>
   );
 }
