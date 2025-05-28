@@ -75,6 +75,10 @@ h2 {
   @apply font-sans text-foreground font-semibold text-3xl uppercase tracking-tight;
 }
 
+h3 {
+  @apply font-sans text-foreground font-semibold text-2xl uppercase tracking-tight;
+}
+
 h6 {
   @apply font-sans text-foreground font-bold uppercase;
 }
