@@ -54,7 +54,7 @@ const Services = () => {
   ];
   return (
     <div>
-      <div className="container mx-auto my-32 px-4 md:px-0">
+      <div className="app-section">
         <h6>Our Services</h6>
         <h2>
           We provide best service

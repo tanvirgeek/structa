@@ -42,7 +42,7 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <div className="container mx-auto my-32 px-4 md:px-0">
+    <div className="app-section">
       <h6 className="text-center uppercase tracking-widest text-gray-500 mb-2">
         expert team
       </h6>

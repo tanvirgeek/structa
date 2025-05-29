@@ -6,7 +6,7 @@ import CircularExperts from "./CircularExperts";
 const Hero = () => {
   return (
     <div className="h-[650px] md:h-[800px] bg-[url('/Hero.png')] bg-cover bg-center">
-      <div className="container mx-auto pt-20 flex flex-col gap-3 px-4 md:px-0">
+      <div className="app-section">
         <div>
           <h1>
             Build Your <br /> Dream House <br />

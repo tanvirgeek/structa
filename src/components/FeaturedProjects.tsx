@@ -30,7 +30,7 @@ const featuredProjects = [
 const FeaturedProjects = () => {
   return (
     <div>
-      <div className="container mx-auto pt-5 md:pt-20 flex flex-col gap-6 px-4 md:px-0">
+      <div className="app-section flex flex-col gap-6 px-4 md:px-0">
         <div className="flex justify-between items-start">
           <div>
             <h6>Recent works</h6>
@@ -45,10 +45,7 @@ const FeaturedProjects = () => {
         <div className="overflow-x-auto scrollbar-hidden">
           <div className="flex gap-5 flex-nowrap">
             {featuredProjects.map((item, index) => (
-              <div
-                key={index}
-                className="min-w-[320px] flex-shrink-0"
-              >
+              <div key={index} className="min-w-[320px] flex-shrink-0">
                 <FeaturedProject
                   imageSrc={item.imageSrc}
                   title={item.title}

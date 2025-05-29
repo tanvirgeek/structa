@@ -4,7 +4,7 @@ import TotalProjects from "./TotalProjects";
 
 const AboutUsMiddle = () => {
   return (
-    <div className="app-section">
+    <div className="app-section mb-15 md:mb-0">
       <div className="flex flex-col md:flex-row items-center md:items-start">
         {/* Left: Image */}
         <div className="relative w-full md:w-1/2 h-64 md:h-[500px] p-4">

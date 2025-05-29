@@ -13,7 +13,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="bg-background-soft text-gray-800 pt-12">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:px-0 px-4">
+      <div className="app-section max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Column 1: Logo, Paragraph, Social Links */}
         <div>
           <Image

@@ -5,7 +5,7 @@ import TestimonialSlider from "./TestimonialSlider";
 const WhyChooseUs = () => {
   return (
     <div>
-      <div className="container flex mx-auto pt-5 md:pt-20 flex-col md:flex-row gap-10 md:gap-3 px-4 md:px-0 justify-between">
+      <div className="app-section flex flex-col md:flex-row gap-10 md:gap-3 px-4 md:px-0 justify-between">
         <div>
           <h6>why choose us</h6>
           <h1>Where trust</h1>
