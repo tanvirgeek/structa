@@ -1,7 +1,7 @@
 "use client";
 import ContactForm from "@/components/ContactForm";
-import ContactHero from "@/components/ContactHero";
-import ContactImage from "@/components/ContactImage";
+import PageHero from "@/components/PageHero";
+import PageHeroImage from "@/components/PageHeroImage";
 import ContactInformation from "@/components/ContactInformation";
 import dynamic from "next/dynamic";
 import React from "react";
@@ -13,8 +13,11 @@ const OfficeMap = dynamic(() => import("@/components/OfficeMap"), {
 const Contact = () => {
   return (
     <div>
-      <ContactHero />
-      <ContactImage />
+      <PageHero
+        heading={`Need Help?\nJust Message Us`}
+        text="Contact With Us"
+      />
+      <PageHeroImage imageUrl={"/contact-hero.png"} />
       <ContactInformation />
       <OfficeMap position={[23.8103, 90.4125]} label="Dhaka Office" />
     </div>

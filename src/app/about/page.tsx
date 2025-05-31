@@ -1,19 +1,18 @@
 import AboutDescription from "@/components/AboutDescription";
-import AboutHero from "@/components/AboutHero";
-import AboutImage from "@/components/AboutImage";
 import ClientRecommendationSlider from "@/components/ClientRecommendationSlider";
 import AboutUsMiddle from "@/components/AboutUsMiddle";
 import ExcitedToStart from "@/components/ExcitedToStart";
 import ExpertTeam from "@/components/ExpertTeam";
-import Footer from "@/components/Footer";
 import React from "react";
 import CompanyLogoMarquee from "@/components/Companies";
+import PageHeroImage from "@/components/PageHeroImage";
+import PageHero from "@/components/PageHero";
 
 const About = () => {
   return (
     <div>
-      <AboutHero />
-      <AboutImage />
+      <PageHero heading={`Crafting\nstructures for`} text="Contact With Us" />
+      <PageHeroImage imageUrl={"/aboutUsHero.png"} />
       <AboutDescription />
       <AboutUsMiddle />
       <ExpertTeam />
