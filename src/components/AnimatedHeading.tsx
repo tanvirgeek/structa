@@ -1,67 +1,61 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 interface AnimatedHeadingProps {
-  lines: string[]; // Each line of heading
-  enableScrollEffect?: boolean; // Scroll-based horizontal movement
-  className?: string; // Additional Tailwind classes
+  lines: string[];
+  className?: string;
 }
 
 const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
   lines,
-  enableScrollEffect = true,
   className = "",
 }) => {
-  const ref = useRef(null);
-
-  // Scroll-based horizontal transform
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  // We start with x being 0% and only apply scrolling effect after the scroll happens
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-
   const container = {
     hidden: {},
     show: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.06, // Slightly more space between letter drops
+        delayChildren: 0.1,
       },
     },
   };
 
-  const line = {
-    hidden: { opacity: 0, y: 30 },
+  const letter = {
+    hidden: { y: -180, opacity: 0 }, // Higher drop
     show: {
-      opacity: 1,
       y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.6,
-        ease: "easeOut",
+        type: "spring",
+        stiffness: 1200,
+        damping: 70,
+        mass: 1.5,
+        duration: 0.8, // More hang-time per letter
       },
     },
   };
 
   return (
     <motion.div
-      ref={ref}
       initial="hidden"
       animate="show"
       variants={container}
       className={`overflow-hidden ${className}`}
     >
-      <motion.h1
-        className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl text-primary space-y-2"
-        style={enableScrollEffect ? { x: "0%" } : {}} // Ensure that no transform is applied initially
-      >
-        {lines.map((lineText, idx) => (
-          <motion.div key={idx} variants={line}>
-            {lineText} {/* Line text */}
-          </motion.div>
+      <motion.h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl text-primary space-y-1">
+        {lines.map((line, lineIndex) => (
+          <div key={lineIndex} className="whitespace-nowrap">
+            {line.split("").map((char, charIndex) => (
+              <motion.span
+                key={char + charIndex}
+                variants={letter}
+                className="inline-block"
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </div>
         ))}
       </motion.h1>
     </motion.div>

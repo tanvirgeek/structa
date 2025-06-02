@@ -11,6 +11,7 @@ import PageHero from "@/components/PageHero";
 const About = () => {
   return (
     <div>
+      
       <PageHero heading={`Crafting\nstructures for`} text="Contact With Us" />
       <PageHeroImage imageUrl={"/aboutUsHero.png"} />
       <AboutDescription />

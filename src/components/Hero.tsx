@@ -8,13 +8,7 @@ const Hero = () => {
   return (
     <div className="h-[650px] md:h-[800px] bg-[url('/Hero.png')] bg-cover bg-center">
       <div className="app-section">
-        <div>
-          <AnimatedHeading
-            lines={["Build Your", "Dream House", "Today"]}
-            enableScrollEffect
-            className="mb-12"
-          />
-        </div>
+        <AnimatedHeading lines={["Build Your", "Dream House", "Today"]} />
 
         <p className="w-1/2">
           Your trusted partner in construction from innovative designs to expert
