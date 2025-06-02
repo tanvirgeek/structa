@@ -2,16 +2,18 @@ import React from "react";
 import Button from "./Button";
 import Image from "next/image";
 import CircularExperts from "./CircularExperts";
+import AnimatedHeading from "./AnimatedHeading";
 
 const Hero = () => {
   return (
     <div className="h-[650px] md:h-[800px] bg-[url('/Hero.png')] bg-cover bg-center">
       <div className="app-section">
         <div>
-          <h1>
-            Build Your <br /> Dream House <br />
-            Today
-          </h1>
+          <AnimatedHeading
+            lines={["Build Your", "Dream House", "Today"]}
+            enableScrollEffect
+            className="mb-12"
+          />
         </div>
 
         <p className="w-1/2">

@@ -60,15 +60,17 @@ const BlogPosts = () => {
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="bg-white rounded-xl overflow-hidden shadow-sm"
+              className="bg-white rounded-xl overflow-hidden shadow-sm group"
             >
-              <Image
-                src={blog.imageUrl}
-                alt={blog.title}
-                width={500}
-                height={300}
-                className="w-full h-56 object-cover"
-              />
+              <div className="w-full h-56 overflow-hidden relative">
+                <Image
+                  src={blog.imageUrl}
+                  alt={blog.title}
+                  width={500}
+                  height={300}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
               <div className="p-4">
                 <div className="flex justify-between text-sm text-muted-foreground">
                   <span className="text-primary">{blog.category}</span>
