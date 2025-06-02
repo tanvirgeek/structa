@@ -3,6 +3,7 @@ import PageHero from "@/components/PageHero";
 import ContactHero from "@/components/PageHero";
 import PageHeroImage from "@/components/PageHeroImage";
 import Services from "@/components/Services";
+import Transforming from "@/components/Transforming";
 import React from "react";
 
 const Service = () => {
@@ -11,6 +12,7 @@ const Service = () => {
       <PageHero heading={`Building Timeless\nSpaces`} text="our services" />
       <PageHeroImage imageUrl={"/contact-hero.png"} />
       <Services />
+      <Transforming />
       <ExcitedToStart />
     </div>
   );
