@@ -31,11 +31,11 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${inriaSans.variable} antialiased`}
       >
-        <div className="overflow-hidden">
+        <div>
           <div className="sticky top-0 z-50 bg-white shadow-md">
             <NavigationBar />
           </div>
-          {children}
+          <div className="overflow-hidden">{children}</div>
           <Footer />
         </div>
       </body>
