@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${inriaSans.variable} antialiased`}
       >
-        <div>
+        <div className="overflow-hidden">
           <div className="sticky top-0 z-50 bg-white shadow-md">
             <NavigationBar />
           </div>

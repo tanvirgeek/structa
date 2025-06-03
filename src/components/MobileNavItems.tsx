@@ -33,10 +33,10 @@ const MobileNavItem: React.FC<MobileNavItemProps> = ({
   };
 
   return (
-    <div className="mb-2 border-b border-gray-200 pb-2">
+    <div className="mb-3 border-b border-gray-300 pb-2">
       {hasDropdown && subItems.length > 0 ? (
         <button
-          className="flex justify-between items-center w-full text-base font-semibold text-gray-800 hover:text-primary transition-colors"
+          className="flex justify-between items-center w-full text-base font-semibold text-gray-800 hover:text-primary px-4 py-3 transition-colors"
           onClick={toggleExpand}
         >
           <span>{label}</span>
@@ -50,26 +50,27 @@ const MobileNavItem: React.FC<MobileNavItemProps> = ({
         <Link
           href={href}
           onClick={onLinkClick}
-          className="block w-full text-left text-base font-semibold text-gray-800 hover:text-primary transition-colors py-2"
+          className="block w-full text-left text-base font-semibold text-gray-800 hover:text-primary px-4 py-3 transition-colors"
         >
           {label}
         </Link>
       )}
 
-      {/* Sub-items dropdown */}
       {hasDropdown && (
         <div
           className={`transition-all duration-300 ease-in-out overflow-hidden ${
-            expanded ? "max-h-64 mt-2 opacity-100" : "max-h-0 opacity-0"
+            expanded ? "max-h-96 mt-2 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <div className="bg-gray-50 rounded-md px-3 py-2 space-y-2 shadow-inner">
-            {subItems.map((sub) => (
+          <div className="bg-gray-50 rounded-md mx-2 shadow-inner border border-gray-200">
+            {subItems.map((sub, i) => (
               <Link
                 key={sub.href}
                 href={sub.href}
-                className="block text-sm text-gray-600 hover:text-primary transition-colors"
                 onClick={onLinkClick}
+                className={`block text-sm text-gray-700 hover:text-primary px-5 py-3 transition-colors border-b border-gray-200 ${
+                  i === subItems.length - 1 ? "border-b-0" : ""
+                }`}
               >
                 {sub.label}
               </Link>
