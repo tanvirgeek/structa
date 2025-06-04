@@ -114,3 +114,48 @@ h6 {
 .animate-marquee {
   animation: marquee 30s linear infinite;
 }
+
+/* global.css */
+@tailwind utilities;
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Small (640px and up) */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* Medium (768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* Large (1024px and up) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* Extra Large (1280px and up) */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* 2XL (1536px and up) */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1400px; /* or whatever you prefer */
+  }
+}
