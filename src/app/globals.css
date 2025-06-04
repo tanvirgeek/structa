@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@tailwind utilities;
 
 @theme {
   --color-primary: var(--primary);
@@ -59,10 +60,6 @@ body {
   font-family: var(--font-poppins);
 }
 
-.app-section {
-  @apply container mx-auto py-10 md:py-20 px-4 md:px-0;
-}
-
 h1 {
   @apply font-sans text-foreground font-bold text-4xl md:text-8xl uppercase;
 }
@@ -100,8 +97,6 @@ h6 {
   }
 }
 
-@tailwind utilities;
-
 @keyframes marquee {
   0% {
     transform: translateX(0%);
@@ -114,9 +109,6 @@ h6 {
 .animate-marquee {
   animation: marquee 30s linear infinite;
 }
-
-/* global.css */
-@tailwind utilities;
 
 .container {
   margin-left: auto;
@@ -158,4 +150,8 @@ h6 {
   .container {
     max-width: 1400px; /* or whatever you prefer */
   }
+}
+
+.app-section {
+  @apply container mx-auto py-10 md:py-20 px-4 md:px-0;
 }
