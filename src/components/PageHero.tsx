@@ -13,7 +13,7 @@ const PageHero: React.FC<PageHeroProps> = ({ heading, text }) => {
   const lines = heading.split("\n");
 
   return (
-    <div className="app-section flex flex-col md:flex-row gap-16 md:gap-40">
+    <div className="app-section container flex flex-col md:flex-row gap-16 md:gap-40">
       <div className="pl-16">
         <AnimatedHeading lines={lines} className="mb-4" />
         <p className="text-primary">{text}</p>
