@@ -57,7 +57,7 @@ export default function ClientRecommendationSlider() {
   const testimonial = testimonials[index];
 
   return (
-    <div className="app-section">
+    <div className="app-section container">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <div
           className="relative bg-white shadow-2xl rounded-2xl px-10 py-14"

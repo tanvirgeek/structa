@@ -30,7 +30,7 @@ const featuredProjects = [
 const FeaturedProjects = () => {
   return (
     <div>
-      <div className="app-section flex flex-col gap-6 px-4 md:px-0">
+      <div className="app-section container flex flex-col gap-6 px-4 md:px-0">
         <div className="flex justify-between items-start">
           <div>
             <h6>Recent works</h6>

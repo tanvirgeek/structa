@@ -7,7 +7,7 @@ import AnimatedHeading from "./AnimatedHeading";
 const Hero = () => {
   return (
     <div className="h-[650px] md:h-[800px] bg-[url('/Hero.png')] bg-cover bg-center">
-      <div className="app-section">
+      <div className="app-section container">
         <AnimatedHeading lines={["Build Your", "Dream House", "Today"]} />
 
         <p className="w-1/2 mb-4">

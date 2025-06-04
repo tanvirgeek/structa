@@ -77,7 +77,7 @@ export default function TeamSection() {
   );
 
   return (
-    <div className="app-section">
+    <div className="app-section container">
       <h6 className="text-center uppercase tracking-widest text-gray-500 mb-2">
         expert team
       </h6>

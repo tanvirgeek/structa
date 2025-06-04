@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const AboutDescription = () => {
   return (
-    <div className="app-section flex justify-end">
+    <div className="app-section container flex justify-end">
       <div className="w-full md:w-[70%] flex flex-col gap-5">
         <h6>about company</h6>
         <h3>

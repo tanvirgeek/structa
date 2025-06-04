@@ -44,7 +44,7 @@ const blogs = [
 const BlogPosts = () => {
   return (
     <div className="bg-background-soft">
-      <div className="app-section flex flex-col gap-6 ">
+      <div className="app-section container flex flex-col gap-6 ">
         <div className="flex justify-between items-start">
           <div>
             <h6>Blog Posts</h6>

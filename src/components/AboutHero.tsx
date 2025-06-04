@@ -4,7 +4,7 @@ import CircularExperts from "./CircularExperts";
 const AboutHero = () => {
   return (
     <div>
-      <div className="app-section flex flex-col md:flex-row justify-center gap-16 md:gap-40">
+      <div className="app-section container flex flex-col md:flex-row justify-center gap-16 md:gap-40">
         <div>
           <h1 className="app-sub-heading">
             Crafting <br /> structures for <br /> a better future

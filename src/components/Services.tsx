@@ -54,7 +54,7 @@ const Services = () => {
   ];
   return (
     <div>
-      <div className="app-section">
+      <div className="app-section container">
         <h6>Our Services</h6>
         <h2>
           We provide best service

@@ -5,7 +5,7 @@ import Button from "./Button";
 const Commitment = () => {
   return (
     <div>
-      <div className="app-section flex flex-col md:flex-row gap-3">
+      <div className="app-section container flex flex-col md:flex-row gap-3">
         <div className="w-full md:w-[50%] aspect-square relative">
           <Image
             src="/commitment.png"
