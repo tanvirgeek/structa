@@ -64,7 +64,7 @@ body {
 }
 
 h1 {
-  @apply font-sans text-foreground font-bold text-5xl uppercase;
+  @apply font-sans text-foreground font-bold text-8xl uppercase;
 }
 
 .app-sub-heading {

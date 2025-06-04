@@ -31,7 +31,7 @@ const getInitialPosition = (direction: Direction) => {
 const FadeInOnScroll: React.FC<FadeInOnScrollProps> = ({
   children,
   className = "",
-  delay = 0.1,
+  delay = 0.0,
   direction = "up",
 }) => {
   const controls = useAnimation();
