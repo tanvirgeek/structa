@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
+import AnimatedHeading from "./AnimatedHeading";
+import Home2HeroCard from "./Home2HeroCard";
 
 const Home2Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -20,10 +22,10 @@ const Home2Hero = () => {
   };
 
   return (
-    <div className="app-section">
-      <div className="md:pl-50">
+    <div className="app-section container relative">
+      <div className="md:pl-50 pb-80">
         <div className="flex gap-5 items-center">
-          <h1>Innovative</h1>
+          <AnimatedHeading lines={["Innovative"]} />
           <Image
             src="/Innovative.png"
             alt="Innovation Image"
@@ -31,7 +33,12 @@ const Home2Hero = () => {
             height={10}
           />
         </div>
-        <h1 className="!text-primary">— Construction</h1>
+        <h1 className="!text-primary">
+          <AnimatedHeading
+            lines={["— Construction"]}
+            textClassName="!text-primary"
+          />
+        </h1>
         <p>
           We combine advanced technologies, sustainable practices craftsmanship
           to
@@ -41,30 +48,32 @@ const Home2Hero = () => {
       </div>
 
       {/* Full-width video with play button */}
-      <div className="relative w-full mt-8">
-        {!isPlaying && (
-          <button
-            className="absolute inset-0 z-10 flex items-center justify-center w-full h-full bg-black/40 hover:bg-black/50 transition"
-            onClick={handlePlay}
-            aria-label="Play Video"
-          >
-            <svg
-              className="w-16 h-16 text-primary"
-              fill="currentColor"
-              viewBox="0 0 24 24"
+      <div className="absolute top-96">
+        <div className="relative w-full mt-8">
+          {!isPlaying && (
+            <button
+              className="absolute inset-0 z-10 flex items-center justify-center w-full h-full bg-black/40 hover:bg-black/50 transition"
+              onClick={handlePlay}
+              aria-label="Play Video"
             >
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </button>
-        )}
+              <svg
+                className="w-16 h-16 text-primary"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </button>
+          )}
 
-        <video
-          ref={videoRef}
-          className="w-full h-auto"
-          src="https://videos.pexels.com/video-files/30215872/12954427_2560_1440_60fps.mp4"
-          controls={isPlaying}
-          playsInline
-        />
+          <video
+            ref={videoRef}
+            className="w-full h-auto"
+            src="https://videos.pexels.com/video-files/30215872/12954427_2560_1440_60fps.mp4"
+            controls={isPlaying}
+            playsInline
+          />
+        </div>
       </div>
     </div>
   );

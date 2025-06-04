@@ -5,11 +5,13 @@ import { motion } from "framer-motion";
 interface AnimatedHeadingProps {
   lines: string[];
   className?: string;
+  textClassName?: string;
 }
 
 const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
   lines,
   className = "",
+  textClassName = "",
 }) => {
   const container = {
     hidden: {},
@@ -43,14 +45,14 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
       variants={container}
       className={`overflow-hidden ${className}`}
     >
-      <motion.h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl text-primary space-y-1">
+      <motion.h1 className="leading-tight">
         {lines.map((line, lineIndex) => (
           <div key={lineIndex} className="whitespace-nowrap">
             {line.split("").map((char, charIndex) => (
               <motion.span
                 key={char + charIndex}
                 variants={letter}
-                className="inline-block"
+                className={`inline-block ${textClassName}`}
               >
                 {char === " " ? "\u00A0" : char}
               </motion.span>
