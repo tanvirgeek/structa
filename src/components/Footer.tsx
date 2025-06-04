@@ -44,7 +44,7 @@ const Footer = () => {
 
         {/* Column 2: Quick Links */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
+          <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2 text-gray-600">
             <li>
               <Link href="/" className="hover:text-gray-900">
@@ -71,7 +71,7 @@ const Footer = () => {
 
         {/* Column 3: Services */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Services</h3>
+          <h4 className="text-xl font-semibold mb-4">Services</h4>
           <ul className="space-y-2 text-gray-600">
             <li>
               <Link href="/services/design" className="hover:text-gray-900">
@@ -101,7 +101,7 @@ const Footer = () => {
 
         {/* Column 4: Contact */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Contact</h3>
+          <h4 className="text-xl font-semibold mb-4">Contact</h4>
           <ul className="space-y-2 text-gray-600">
             <li>
               Email:{" "}

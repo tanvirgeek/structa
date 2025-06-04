@@ -34,7 +34,7 @@ const FeaturedProjects = () => {
         <div className="flex justify-between items-start">
           <div>
             <h6>Recent works</h6>
-            <h1 className="text-2xl font-bold">Featured Projects</h1>
+            <h2>Featured Projects</h2>
           </div>
           <Link href={"/"} className="self-end underline text-sm">
             view all projects

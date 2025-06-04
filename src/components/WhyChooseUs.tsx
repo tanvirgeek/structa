@@ -8,8 +8,8 @@ const WhyChooseUs = () => {
       <div className="app-section flex flex-col md:flex-row gap-10 md:gap-3 px-4 md:px-0 justify-between">
         <div>
           <h6>why choose us</h6>
-          <h1>Where trust</h1>
-          <h1>meets excellence</h1>
+          <h2>Where trust</h2>
+          <h2>meets excellence</h2>
         </div>
         <div className="w-full md:w-[50%] pb-10">
           <ToggleDetail

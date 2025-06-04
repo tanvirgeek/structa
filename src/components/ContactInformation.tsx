@@ -6,10 +6,10 @@ const ContactInformation = () => {
     <div className="app-section flex flex-col md:flex-row justify-center gap-8 md:gap20">
       <div className="w-full md:w-1/3">
         <p className="mb-2">Contact Information</p>
-        <h2>
+        <h3 className="">
           Contact us today <br /> and let’s bring
           <br /> your vision to life
-        </h2>
+        </h3>
         <div className="flex flex-col gap-2 mt-10">
           <p>
             hotline:

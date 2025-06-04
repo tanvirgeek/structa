@@ -22,12 +22,12 @@ const TotalProjects: React.FC<TotalProjectsProps> = ({
       >
         <div className="flex flex-col items-center">
           <RollingNumber target={630} />
-          <h3>Engineering Experts</h3>
+          <h4>Engineering Experts</h4>
         </div>
 
         <div className="flex flex-col items-center">
           <RollingNumber target={1400} />
-          <h3>Successful Projects Done</h3>
+          <h4>Successful Projects Done</h4>
         </div>
 
         <div className="flex flex-col items-center">
@@ -35,7 +35,7 @@ const TotalProjects: React.FC<TotalProjectsProps> = ({
             <RollingNumber target={98} />
             <span>%</span>
           </div>
-          <h3>Client Satisfaction</h3>
+          <h4>Client Satisfaction</h4>
         </div>
       </div>
     </div>

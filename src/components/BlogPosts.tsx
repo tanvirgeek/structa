@@ -48,7 +48,7 @@ const BlogPosts = () => {
         <div className="flex justify-between items-start">
           <div>
             <h6>Blog Posts</h6>
-            <h1 className="text-2xl font-bold">Our Latest News</h1>
+            <h2>Our Latest News</h2>
           </div>
           <Link href={"/"} className="self-end underline text-sm">
             view all blogs
@@ -77,7 +77,7 @@ const BlogPosts = () => {
                   <span>{blog.date}</span>
                 </div>
                 <hr className="my-2 border-muted" />
-                <h2 className="text-lg font-semibold">{blog.title}</h2>
+                <h4>{blog.title}</h4>
               </div>
             </div>
           ))}

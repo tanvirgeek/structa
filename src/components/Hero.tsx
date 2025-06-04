@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="app-section">
         <AnimatedHeading lines={["Build Your", "Dream House", "Today"]} />
 
-        <p className="w-1/2">
+        <p className="w-1/2 mb-4">
           Your trusted partner in construction from innovative designs to expert
           project management deliver excellence.
         </p>

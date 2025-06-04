@@ -18,7 +18,7 @@ export default function ToggleDetail({
         className="flex items-center justify-between w-full cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <h2 className="text-xl font-semibold">{title}</h2>
+        <h3>{title}</h3>
         <div className="text-gray-600">
           {isOpen ? (
             <FaTimes className="w-5 h-5" />

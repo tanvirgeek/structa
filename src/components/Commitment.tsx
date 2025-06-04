@@ -16,7 +16,7 @@ const Commitment = () => {
         </div>
         <div className="flex flex-col w-full  md:w-[50%] pt-6 justify-center gap-3">
           <h6>Our Commitment</h6>
-          <h1>We embrace the uniqueness of every single project</h1>
+          <h2>We embrace the uniqueness of every single project</h2>
           <p>
             Construction is a premier construction company dedicated to
             delivering exceptional projects characterized by quality,

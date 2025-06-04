@@ -12,13 +12,9 @@ const ExcitedToStart = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center text-white flex flex-col items-center justify-center min-h-screen">
-        <h1 className="text-4xl font-semibold text-white!">
-          Excited to start your
-        </h1>
-        <h1 className="text-4xl font-semibold mb-4 text-white!">
-          Next Construct?
-        </h1>
-        <div className="flex justify-center">
+        <h2 className="text-white!">Excited to start your</h2>
+        <h2 className="text-white!">Next Construct?</h2>
+        <div className="flex justify-center mt-4">
           <Button text={"Get A Quote"} />
         </div>
       </div>

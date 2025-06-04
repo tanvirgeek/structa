@@ -21,9 +21,9 @@ export default function PlansToReality() {
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <span className="text-primary font-bold text-lg">01</span>
-                <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide">
+                <h4 className="text-lg font-semibold text-gray-900 uppercase tracking-wide">
                   INITIAL CONSULTATION
-                </h3>
+                </h4>
               </div>
 
               <div className="bg-white rounded-lg overflow-hidden shadow-sm">
@@ -46,25 +46,25 @@ export default function PlansToReality() {
             {/* Step 02 - Concept Development */}
             <div className="flex items-center gap-3 border-b-1 border-gray-300 py-2">
               <span className="text-primary font-bold text-lg">02</span>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide">
+              <h4 className="text-lg font-semibold text-gray-900 uppercase tracking-wide">
                 CONCEPT DEVELOPMENT
-              </h3>
+              </h4>
             </div>
 
             {/* Step 03 - Project Planning */}
             <div className="flex items-center gap-3 border-b-1 border-gray-300 py-2">
               <span className="text-primary font-bold text-lg">03</span>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide">
+              <h4 className="text-lg font-semibold text-gray-900 uppercase tracking-wide">
                 PROJECT PLANNING
-              </h3>
+              </h4>
             </div>
 
             {/* Step 04 - Execution & Delivery */}
             <div className="flex items-center gap-3 border-b-1 border-gray-300 py-2">
               <span className="text-primary font-bold text-lg">04</span>
-              <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide">
+              <h4 className="text-lg font-semibold text-gray-900 uppercase tracking-wide">
                 EXECUTION & DELIVERY
-              </h3>
+              </h4>
             </div>
           </div>
         </div>

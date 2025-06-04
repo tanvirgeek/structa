@@ -71,7 +71,7 @@ export default function TeamSection() {
       </div>
 
       {/* Name & Title */}
-      <h3 className="text-lg font-semibold mt-4">{member.name}</h3>
+      <h4 className="text-lg font-semibold mt-4">{member.name}</h4>
       <p className="text-gray-500">{member.title}</p>
     </Link>
   );
@@ -81,12 +81,10 @@ export default function TeamSection() {
       <h6 className="text-center uppercase tracking-widest text-gray-500 mb-2">
         expert team
       </h6>
-      <h1 className="text-2xl font-bold text-center mb-0">
-        The experts bringing
-      </h1>
-      <h1 className="text-2xl font-bold text-center mb-12">
-        your design to life
-      </h1>
+      <div className="text-center">
+        <h2>The experts bringing</h2>
+        <h2>your design to life</h2>
+      </div>
 
       {/* Mobile: Horizontal Scrollable Row */}
       <div className="md:hidden flex space-x-6 overflow-x-auto pb-4 scrollbar-hide">

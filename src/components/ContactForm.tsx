@@ -30,7 +30,7 @@ export default function ContactForm() {
 
   return (
     <div className="p-8 border border-gray-300">
-      <h3 className="mb-8">Send Us Message</h3>
+      <h4 className="mb-8">Send Us Message</h4>
       <form onSubmit={handleSubmit} className="max-w-3xl mx-auto bg-white">
         {/* Row 1: Name & Phone */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
