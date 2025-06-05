@@ -23,7 +23,7 @@ const Home2Hero = () => {
 
   return (
     <div className="app-section container relative">
-      <div className="md:pl-50 pb-80">
+      <div className="md:pl-50 md:pb-80">
         <div className="flex gap-5 items-center">
           <AnimatedHeading lines={["Innovative"]} />
           <Image
@@ -48,7 +48,7 @@ const Home2Hero = () => {
       </div>
 
       {/* Full-width video with play button */}
-      <div className="absolute top-96">
+      <div className=" md:absolute md:top-96">
         <div className="relative w-full mt-8">
           {!isPlaying && (
             <button

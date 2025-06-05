@@ -21,7 +21,7 @@ const Home2HeroCard: React.FC<CommentBlockProps> = ({
     <div
       className={clsx(
         "w-full px-4 py-6 text-left",
-        hasBorder && "border-l-2 border-r-2 border-gray-300"
+        hasBorder && "border-l-2 border-r-2 border-gray-800"
       )}
     >
       <Image

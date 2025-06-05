@@ -3,9 +3,9 @@ import Home2HeroCard from "./Home2HeroCard";
 
 const Home2HeroBottom = () => {
   return (
-    <div className="bg-foreground pt-80">
+    <div className="bg-foreground md:pt-80">
       <div className="app-section container">
-        <div className="flex">
+        <div className="flex flex-col md:flex-row">
           <Home2HeroCard
             imageSrc={"/residential.png"}
             imageAlt={"Residential Image"}
