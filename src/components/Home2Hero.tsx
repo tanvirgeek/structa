@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 import AnimatedHeading from "./AnimatedHeading";
-import Home2HeroCard from "./Home2HeroCard";
 
 const Home2Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
