@@ -16,15 +16,15 @@ interface FadeInOnScrollProps {
 const getInitialPosition = (direction: Direction) => {
   switch (direction) {
     case "up":
-      return { y: 300, x: 0 };
+      return { y: 100, x: 0 };
     case "down":
-      return { y: -300, x: 0 };
+      return { y: -100, x: 0 };
     case "left":
-      return { x: 300, y: 0 };
+      return { x: 100, y: 0 };
     case "right":
-      return { x: -300, y: 0 };
+      return { x: -100, y: 0 };
     default:
-      return { y: 300, x: 0 };
+      return { y: 100, x: 0 };
   }
 };
 

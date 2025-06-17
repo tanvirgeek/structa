@@ -1,6 +1,4 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
+import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 
 const teamMembers = [
@@ -48,57 +46,46 @@ const teamMembers = [
   },
 ];
 
-export default function TeamSection() {
-  const renderCard = (member: (typeof teamMembers)[0]) => (
-    <Link
-      key={member.id}
-      href={member.linkedin}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group block text-center bg-white shadow rounded-lg p-6 overflow-hidden transition-transform hover:scale-[1.02]"
-    >
-      {/* Image Container with Hover Zoom and Overlay */}
-      <div className="w-full h-72 relative overflow-hidden rounded-md">
-        <Image
-          src={member.image}
-          alt={member.name}
-          fill
-          className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-30 transition-opacity duration-300 flex items-center justify-center">
-          <FaLinkedin className="text-white text-3xl group-hover:opacity-100 transition-opacity" />
-        </div>
-      </div>
-
-      {/* Name & Title */}
-      <h4 className="text-lg font-semibold mt-4">{member.name}</h4>
-      <p className="text-gray-500">{member.title}</p>
-    </Link>
-  );
-
+const Home2Experts = () => {
   return (
-    <div className="app-section container">
-      <h6 className="text-center uppercase tracking-widest text-gray-500 mb-2">
-        expert team
-      </h6>
-      <div className="text-center">
-        <h2>The experts bringing</h2>
-        <h2>your design to life</h2>
+    <div className="app-section container py-12">
+      <div className="mb-10 text-center">
+        <h6>Expert Team</h6>
+        <h2>
+          The experts bringing <br /> your design to life
+        </h2>
       </div>
 
-      {/* Mobile: Horizontal Scrollable Row */}
-      <div className="md:hidden flex space-x-6 overflow-x-auto pb-4 scrollbar-hide">
+      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {teamMembers.map((member) => (
-          <div key={member.id} className="flex-shrink-0 w-[250px]">
-            {renderCard(member)}
-          </div>
-        ))}
-      </div>
+          <a
+            key={member.id}
+            href={member.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition"
+          >
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-80 object-cover"
+            />
 
-      {/* Desktop: 2 Rows Grid */}
-      <div className="hidden md:grid grid-cols-4 gap-8">
-        {teamMembers.map(renderCard)}
+            {/* Bottom overlay with name + title */}
+            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white px-4 py-3">
+              <h5 className="text-white">{member.name}</h5>
+              <p className="">{member.title}</p>
+            </div>
+
+            {/* Hover LinkedIn Icon */}
+            <div className="absolute inset-0 flex items-center justify-center bg-black/30 bg-opacity-60 opacity-0 group-hover:opacity-100 transition">
+              <FaLinkedin className="text-white text-3xl" />
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   );
-}
+};
+
+export default Home2Experts;

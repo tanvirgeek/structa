@@ -1,4 +1,6 @@
 import Home2About from "@/components/ Home2About";
+import ClientRecommendationSlider from "@/components/ClientRecommendationSlider";
+import ExpertTeam from "@/components/ExpertTeam";
 import Home2Hero from "@/components/Home2Hero";
 import Home2HeroBottom from "@/components/Home2HeroBottom";
 import Home2Horizontal from "@/components/Home2Horizontal";
@@ -16,6 +18,8 @@ const Home2 = () => {
         <Home2Horizontal />
         <Home2Projects />
         <PlansToReality />
+        <ExpertTeam />
+        <ClientRecommendationSlider />
       </div>
     </div>
   );

@@ -15,39 +15,39 @@ export default function Home() {
     <div>
       <Hero />
 
-      <FadeInOnScroll direction="right">
+      <FadeInOnScroll direction="up">
         <Services />
       </FadeInOnScroll>
 
-      <FadeInOnScroll direction="left">
+      <FadeInOnScroll direction="up">
         <Commitment />
       </FadeInOnScroll>
 
-      <FadeInOnScroll direction="right">
+      <FadeInOnScroll direction="up">
         <VisionMission />
       </FadeInOnScroll>
 
-      <FadeInOnScroll direction="left">
+      <FadeInOnScroll direction="up">
         <TotalProjects />
       </FadeInOnScroll>
 
-      <FadeInOnScroll direction="right">
+      <FadeInOnScroll direction="up">
         <FeaturedProjects />
       </FadeInOnScroll>
 
-      <FadeInOnScroll direction="left">
+      <FadeInOnScroll direction="up">
         <WhyChooseUs />
       </FadeInOnScroll>
 
-      <FadeInOnScroll direction="right">
+      <FadeInOnScroll direction="up">
         <ExpertTeam />
       </FadeInOnScroll>
 
-      <FadeInOnScroll direction="left">
+      <FadeInOnScroll direction="up">
         <BlogPosts />
       </FadeInOnScroll>
 
-      <FadeInOnScroll direction="right">
+      <FadeInOnScroll direction="up">
         <ExcitedToStart />
       </FadeInOnScroll>
     </div>
