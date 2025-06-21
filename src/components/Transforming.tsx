@@ -6,7 +6,7 @@ import ProgressBar from "./ProgressBar";
 
 const Transforming = () => {
   return (
-    <div className="app-section">
+    <div className="app-section container">
       <div className="px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left: Image */}
         <div className="relative w-full h-80 md:h-[600px]">

@@ -97,6 +97,36 @@ h6 {
   }
 }
 
+@keyframes logo-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-marquee {
+  animation: logo-marquee 25s linear infinite;
+}
+
+/* Apply the color change on hover */
+.group:hover .object-contain {
+  filter: hue-rotate(180deg) brightness(1.2) saturate(1.5);
+}
+
+@media (max-width: 768px) {
+  .logo-marquee {
+    animation-duration: 15s; /* Faster speed on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-marquee {
+    animation-duration: 10s; /* Even faster speed on smaller screens */
+  }
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0%);

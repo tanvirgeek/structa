@@ -1,5 +1,7 @@
 import Home2About from "@/components/ Home2About";
 import ClientRecommendationSlider from "@/components/ClientRecommendationSlider";
+import Comapnies from "@/components/Companies";
+import Companies from "@/components/Companies";
 import ExpertTeam from "@/components/ExpertTeam";
 import Home2Blogs from "@/components/Home2Blogs";
 import Home2Hero from "@/components/Home2Hero";
@@ -21,7 +23,8 @@ const Home2 = () => {
         <PlansToReality />
         <ExpertTeam />
         <ClientRecommendationSlider />
-        <Home2Blogs/>
+        <Comapnies />
+        <Home2Blogs />
       </div>
     </div>
   );
