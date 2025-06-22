@@ -6,6 +6,7 @@ import ContactInformation from "@/components/ContactInformation";
 import dynamic from "next/dynamic";
 import React from "react";
 import Footer from "@/components/Footer";
+import NavigationBar from "@/components/NavigationBar";
 
 const OfficeMap = dynamic(() => import("@/components/OfficeMap"), {
   ssr: false,
@@ -14,6 +15,9 @@ const OfficeMap = dynamic(() => import("@/components/OfficeMap"), {
 const Contact = () => {
   return (
     <div>
+      <div className="sticky top-0 z-50 bg-white shadow-md">
+        <NavigationBar />
+      </div>
       <PageHero
         heading={`Need Help?\nJust Message Us`}
         text="Contact With Us"

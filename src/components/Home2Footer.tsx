@@ -13,14 +13,16 @@ import Button from "./Button";
 
 const Home2Footer = () => {
   return (
-    <footer className="bg-black text-gray-300 pt-12">
+    <footer className="bg-black text-gray-300 pt-12 px-4 md:px-0">
       {/* Top Section */}
       <div className="container py-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <h3 className="!text-white">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+          <h3 className="!text-white mb-4 md:mb-0">
             Building a better <br /> Future with Our Help
           </h3>
-          <Button text={"Get A Quote"} />
+          <div className="w-full md:w-auto">
+            <Button text={"Get A Quote"} />
+          </div>
         </div>
         <hr className="border-gray-700 mt-4" />
       </div>

@@ -8,10 +8,14 @@ import CompanyLogoMarquee from "@/components/Companies";
 import PageHeroImage from "@/components/PageHeroImage";
 import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
+import NavigationBar from "@/components/NavigationBar";
 
 const About = () => {
   return (
     <div>
+      <div className="sticky top-0 z-50 bg-white shadow-md">
+        <NavigationBar />
+      </div>
       <PageHero heading={`Crafting\nstructures for`} text="Contact With Us" />
       <PageHeroImage imageUrl={"/aboutUsHero.png"} />
       <AboutDescription />

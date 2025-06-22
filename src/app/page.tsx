@@ -6,6 +6,7 @@ import FadeInOnScroll from "@/components/FadeInOnScroll";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import NavigationBar from "@/components/NavigationBar";
 import Services from "@/components/Services";
 import TotalProjects from "@/components/TotalProjects";
 import VisionMission from "@/components/VisionMission";
@@ -13,7 +14,10 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 
 export default function Home() {
   return (
-    <div>
+    <div className="relative">
+      <div className="sticky top-0 z-50 bg-white shadow-md">
+        <NavigationBar />
+      </div>
       <Hero />
 
       <FadeInOnScroll direction="up">

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NavigationBar from "@/components/NavigationBar";
 import { Space_Grotesk, Inria_Sans } from "next/font/google";
 import Footer from "@/components/Footer";
 
@@ -31,12 +30,9 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${inriaSans.variable} antialiased`}
       >
-        <div>
-          <div className="sticky top-0 z-50 bg-white shadow-md">
-            <NavigationBar />
-          </div>
-          <div className="overflow-hidden">{children}</div>
-        </div>
+        {/* You should add selected navbar here */}
+        <div>{children}</div>
+        {/* You should add selected footer here */}
       </body>
     </html>
   );
