@@ -1,4 +1,5 @@
 import ExcitedToStart from "@/components/ExcitedToStart";
+import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 import ContactHero from "@/components/PageHero";
 import PageHeroImage from "@/components/PageHeroImage";
@@ -16,6 +17,7 @@ const Service = () => {
       <Transforming />
       <PlansToReality />
       <ExcitedToStart />
+      <Footer />
     </div>
   );
 };

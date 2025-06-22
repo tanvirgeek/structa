@@ -36,7 +36,6 @@ export default function RootLayout({
             <NavigationBar />
           </div>
           <div className="overflow-hidden">{children}</div>
-          <Footer />
         </div>
       </body>
     </html>

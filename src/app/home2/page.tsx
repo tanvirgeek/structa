@@ -4,6 +4,7 @@ import Comapnies from "@/components/Companies";
 import Companies from "@/components/Companies";
 import ExpertTeam from "@/components/ExpertTeam";
 import Home2Blogs from "@/components/Home2Blogs";
+import Home2Footer from "@/components/Home2Footer";
 import Home2Hero from "@/components/Home2Hero";
 import Home2HeroBottom from "@/components/Home2HeroBottom";
 import Home2Horizontal from "@/components/Home2Horizontal";
@@ -25,6 +26,7 @@ const Home2 = () => {
         <ClientRecommendationSlider />
         <Comapnies />
         <Home2Blogs />
+        <Home2Footer />
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import ExcitedToStart from "@/components/ExcitedToStart";
 import ExpertTeam from "@/components/ExpertTeam";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
 import FeaturedProjects from "@/components/FeaturedProjects";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import TotalProjects from "@/components/TotalProjects";
@@ -50,6 +51,8 @@ export default function Home() {
       <FadeInOnScroll direction="up">
         <ExcitedToStart />
       </FadeInOnScroll>
+
+      <Footer />
     </div>
   );
 }

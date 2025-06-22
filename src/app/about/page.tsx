@@ -7,6 +7,7 @@ import React from "react";
 import CompanyLogoMarquee from "@/components/Companies";
 import PageHeroImage from "@/components/PageHeroImage";
 import PageHero from "@/components/PageHero";
+import Footer from "@/components/Footer";
 
 const About = () => {
   return (
@@ -19,6 +20,7 @@ const About = () => {
       <ClientRecommendationSlider />
       <CompanyLogoMarquee />
       <ExcitedToStart />
+      <Footer />
     </div>
   );
 };

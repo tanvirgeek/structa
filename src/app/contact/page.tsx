@@ -5,6 +5,7 @@ import PageHeroImage from "@/components/PageHeroImage";
 import ContactInformation from "@/components/ContactInformation";
 import dynamic from "next/dynamic";
 import React from "react";
+import Footer from "@/components/Footer";
 
 const OfficeMap = dynamic(() => import("@/components/OfficeMap"), {
   ssr: false,
@@ -20,6 +21,7 @@ const Contact = () => {
       <PageHeroImage imageUrl={"/contact-hero.png"} />
       <ContactInformation />
       <OfficeMap position={[23.8103, 90.4125]} label="Dhaka Office" />
+      <Footer />
     </div>
   );
 };
