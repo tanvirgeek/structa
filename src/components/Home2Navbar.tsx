@@ -13,7 +13,11 @@ const navItems = [
     item: "Home",
     href: "/",
     hasDropdown: true,
-    subItems: [{ label: "Home 2", href: "/home2" }],
+    subItems: [
+      { label: "Home 1", href: "/" },
+      { label: "Home 2", href: "/home2" },
+      { label: "Home 3", href: "/home3" },
+    ],
   },
   {
     item: "About",
