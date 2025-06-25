@@ -46,17 +46,20 @@ export default function Home3Hero() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      handleNext(); // Automatically move to the next slide
-    }, 7000); // 5 seconds
+      handleNext();
+    }, 7000);
 
-    return () => clearInterval(interval); // Cleanup on unmount
-  }, []); // Empty dependency array to run only once
+    return () => clearInterval(interval);
+  }, []);
 
   const currentHero = heroData[currentIndex];
 
   return (
-    <div className="relative w-full" style={{ height: "calc(100vh - 50px)" }}>
-      {/* Background Image with Zoom Effect */}
+    <div
+      className="relative w-full h-screen max-h-[calc(100vh-50px)]"
+      style={{ height: "calc(100vh - 50px)" }}
+    >
+      {/* Background Image */}
       <motion.div
         key={currentHero.id}
         className="absolute inset-0 w-full h-full"
@@ -77,17 +80,17 @@ export default function Home3Hero() {
       </motion.div>
 
       {/* Hero Content */}
-      <div className="relative z-10 text-white p-6 md:px-16 flex flex-col justify-end h-full">
-        <div className="flex justify-between items-end w-full mb-4">
-          <div className="flex-1 pr-4">
+      <div className="container px-4 md:px-0 relative z-10 text-white py-4 sm:py-6 md:py-16 flex flex-col justify-center md:justify-end h-full">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end w-full mb-4">
+          <div className="flex-1 pr-0 sm:pr-4">
             <AnimatePresence mode="wait">
               <motion.h6
-                key={currentHero.title}
+                key={`h6-${currentHero.id}`}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 1, delay: 0.5 }}
-                className="font-bold !text-white text-xl md:text-2xl !lowercase"
+                className="font-bold text-sm sm:text-lg !text-white !lowercase"
               >
                 #1 Construction Company
               </motion.h6>
@@ -97,13 +100,13 @@ export default function Home3Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.8 }}
-                className="font-bold !text-white text-2xl md:text-4xl lg:text-5xl"
+                className="font-bold !text-white"
                 dangerouslySetInnerHTML={{ __html: currentHero.title }}
               ></motion.h1>
             </AnimatePresence>
           </div>
 
-          <span className="ml-4">
+          <span className="mt-4 sm:mt-0 sm:ml-4">
             <Button text={currentHero.buttonText} />
           </span>
         </div>
@@ -112,27 +115,27 @@ export default function Home3Hero() {
         <div className="h-[2px] w-full bg-gray-400 mb-4"></div>
 
         {/* Paragraph and Navigation */}
-        <div className="flex justify-between items-center w-full">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full gap-4 sm:gap-0">
           <motion.p
-            key={currentHero.id}
+            key={`p-${currentHero.id}`}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.8 }}
-            className="text-lg max-w-md"
+            className="text-sm sm:text-lg max-w-full sm:max-w-md"
           >
             {currentHero.paragraph}
           </motion.p>
-          <div className="flex gap-4">
+          <div className="flex gap-2 sm:gap-4 mt-2 sm:mt-0">
             <button
               onClick={handlePrev}
-              className="w-12 h-12 flex justify-center items-center rounded-full bg-black/50 text-white hover:bg-black/70"
+              className="w-10 h-10 sm:w-12 sm:h-12 flex justify-center items-center rounded-full bg-black/50 text-white hover:bg-black/70"
             >
               <FaArrowLeft />
             </button>
             <button
               onClick={handleNext}
-              className="w-12 h-12 flex justify-center items-center rounded-full bg-black/50 text-white hover:bg-black/70"
+              className="w-10 h-10 sm:w-12 sm:h-12 flex justify-center items-center rounded-full bg-black/50 text-white hover:bg-black/70"
             >
               <FaArrowRight />
             </button>
