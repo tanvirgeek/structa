@@ -1,6 +1,8 @@
 import Home3Expertise from "@/components/Home3Expertise";
 import Home3Hero from "@/components/Home3Hero";
+import Home3Image from "@/components/Home3Image";
 import Home3Navigation from "@/components/Home3Navigation";
+import Home3Services from "@/components/Home3Services";
 import Transforming from "@/components/Transforming";
 import React from "react";
 
@@ -13,6 +15,8 @@ const Home3 = () => {
       <Home3Hero />
       <Home3Expertise />
       <Transforming />
+      <Home3Services />
+      <Home3Image />
     </div>
   );
 };
