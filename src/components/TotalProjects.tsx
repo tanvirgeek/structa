@@ -4,10 +4,12 @@ import RollingNumber from "./RollingNumber";
 
 interface TotalProjectsProps {
   isVertical?: boolean;
+  numberStyle?: string; // New prop for number styling
 }
 
 const TotalProjects: React.FC<TotalProjectsProps> = ({
   isVertical = false,
+  numberStyle = "text-4xl text-orange-500", // Default style for numbers
 }) => {
   return (
     <div className="app-section">
@@ -21,18 +23,18 @@ const TotalProjects: React.FC<TotalProjectsProps> = ({
         )}
       >
         <div className="flex flex-col items-center">
-          <RollingNumber target={630} />
+          <RollingNumber target={630} className={numberStyle} />
           <h4>Engineering Experts</h4>
         </div>
 
         <div className="flex flex-col items-center">
-          <RollingNumber target={1400} />
+          <RollingNumber target={1400} className={numberStyle} />
           <h4>Successful Projects Done</h4>
         </div>
 
         <div className="flex flex-col items-center">
-          <div>
-            <RollingNumber target={98} />
+          <div className={clsx("flex items-center", numberStyle)}>
+            <RollingNumber target={98} className={numberStyle} />
             <span>%</span>
           </div>
           <h4>Client Satisfaction</h4>

@@ -1,8 +1,10 @@
 import Home3Expertise from "@/components/Home3Expertise";
+import Home3FeaturedProjects from "@/components/Home3FeaturedProjects";
 import Home3Hero from "@/components/Home3Hero";
 import Home3Image from "@/components/Home3Image";
 import Home3Navigation from "@/components/Home3Navigation";
 import Home3Services from "@/components/Home3Services";
+import TotalProjects from "@/components/TotalProjects";
 import Transforming from "@/components/Transforming";
 import React from "react";
 
@@ -17,6 +19,9 @@ const Home3 = () => {
       <Transforming />
       <Home3Services />
       <Home3Image />
+      <Home3FeaturedProjects />
+
+      <TotalProjects numberStyle="text-8xl text-primary font-bold" />
     </div>
   );
 };

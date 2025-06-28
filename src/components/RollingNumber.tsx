@@ -7,11 +7,13 @@ import { useInView } from "framer-motion";
 type RollingNumberProps = {
   target: number;
   duration?: number;
+  className?: string; // Added className prop
 };
 
 export default function RollingNumber({
   target,
   duration = 1,
+  className = "text-4xl font-bold", // Default styling
 }: RollingNumberProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
@@ -46,7 +48,7 @@ export default function RollingNumber({
   }, [isInView, target, duration]);
 
   return (
-    <span ref={ref} className="text-4xl font-bold">
+    <span ref={ref} className={className}>
       {display}
     </span>
   );
