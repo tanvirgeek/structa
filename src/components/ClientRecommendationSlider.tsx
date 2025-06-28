@@ -60,7 +60,7 @@ export default function ClientRecommendationSlider() {
     <div className="app-section container">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <div
-          className="relative bg-white shadow-2xl rounded-2xl px-10 py-14"
+          className="relative bg-white shadow-2xl rounded-2xl px-6 md:px-10 py-10 md:py-14"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -70,13 +70,13 @@ export default function ClientRecommendationSlider() {
           </div>
 
           {/* Recommendation */}
-          <p className="text-xl italic text-gray-700 mb-10 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl italic text-gray-700 mb-8 max-w-3xl mx-auto">
             “{testimonial.recommendation}”
           </p>
 
           {/* Client Info */}
-          <div className="flex items-center justify-center gap-6">
-            <div className="w-20 h-20 relative rounded-full overflow-hidden border border-primary">
+          <div className="flex items-center justify-center gap-4 md:gap-6">
+            <div className="w-16 h-16 md:w-20 md:h-20 relative rounded-full overflow-hidden border border-primary">
               <Image
                 src={testimonial.image}
                 alt={testimonial.name}
@@ -85,15 +85,17 @@ export default function ClientRecommendationSlider() {
               />
             </div>
             <div className="text-left">
-              <h4 className="text-lg font-bold text-gray-800">
+              <h4 className="text-base md:text-lg font-bold text-gray-800">
                 {testimonial.name}
               </h4>
-              <p className="text-sm text-gray-500">{testimonial.designation}</p>
+              <p className="text-sm md:text-base text-gray-500">
+                {testimonial.designation}
+              </p>
             </div>
           </div>
 
           {/* Arrows */}
-          <div className="absolute left-4 top-1/2 -translate-y-1/2">
+          <div className="absolute -left-4 md:left-4 top-1/2 -translate-y-1/2 md:translate-y-0">
             <button
               onClick={prevSlide}
               className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition"
@@ -102,7 +104,7 @@ export default function ClientRecommendationSlider() {
             </button>
           </div>
 
-          <div className="absolute right-4 top-1/2 -translate-y-1/2">
+          <div className="absolute -right-4 md:right-4 top-1/2 -translate-y-1/2 md:translate-y-0">
             <button
               onClick={nextSlide}
               className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition"
