@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "./Button";
-import Image from "next/image";
 import CircularExperts from "./CircularExperts";
 import AnimatedHeading from "./AnimatedHeading";
 

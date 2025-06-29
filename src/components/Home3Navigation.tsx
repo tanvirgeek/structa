@@ -17,6 +17,7 @@ const navItems = [
       { label: "Home 1", href: "/" },
       { label: "Home 2", href: "/home2" },
       { label: "Home 3", href: "/home3" },
+      { label: "Home 4", href: "/home4" },
     ],
   },
   {
@@ -62,21 +63,26 @@ export default function Home3Navigation() {
           {navItems.map((nav) => (
             <div key={nav.item} className="relative group">
               <Link
-                className="flex gap-1 items-center cursor-pointer font-mono"
                 href={nav.href}
+                className={clsx(
+                  "flex gap-1 items-center font-mono transition-colors duration-200",
+                  !nav.hasDropdown && "hover:text-primary",
+                  nav.hasDropdown && "cursor-pointer"
+                )}
               >
                 {nav.item}
                 {nav.hasDropdown && (
                   <FaChevronDown className="w-[14px] h-[14px] transform transition-transform duration-200 group-hover:rotate-180" />
                 )}
               </Link>
+
               {nav.hasDropdown && nav.subItems.length > 0 && (
                 <div className="absolute left-0 top-full mt-2 bg-white shadow-md rounded-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-200 min-w-[160px] py-2 z-50">
                   {nav.subItems.map((sub) => (
                     <Link
                       key={sub.href}
                       href={sub.href}
-                      className="block px-4 py-2 hover:bg-muted"
+                      className="block hover:bg-gray-100 px-4 py-2 hover:bg-muted hover:text-primary transition-all duration-200"
                     >
                       {sub.label}
                     </Link>
@@ -85,6 +91,7 @@ export default function Home3Navigation() {
               )}
             </div>
           ))}
+
           {/* Six Dots Icon */}
           <button
             className="text-foreground text-2xl hidden lg:block"
@@ -131,7 +138,7 @@ export default function Home3Navigation() {
         <Button text="Get a Quote" onClick={() => setIsLeftPanelOpen(false)} />
       </div>
 
-      {/* Right Panel (only for md and up) */}
+      {/* Right Panel (for md+ screens) */}
       <div
         className={clsx(
           "fixed top-0 right-0 h-full w-[80%] max-w-md bg-white text-foreground shadow-md transform transition-transform duration-300 z-40 p-6 overflow-y-auto md:block hidden",

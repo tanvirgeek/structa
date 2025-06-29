@@ -52,7 +52,7 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({
               <motion.span
                 key={char + charIndex}
                 variants={letter}
-                className={`inline-block ${textClassName}`}
+                className={`inline-block ${textClassName} !font-sans`}
               >
                 {char === " " ? "\u00A0" : char}
               </motion.span>

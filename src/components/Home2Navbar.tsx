@@ -17,6 +17,7 @@ const navItems = [
       { label: "Home 1", href: "/" },
       { label: "Home 2", href: "/home2" },
       { label: "Home 3", href: "/home3" },
+      { label: "Home 4", href: "/home4" },
     ],
   },
   {
@@ -45,9 +46,10 @@ const navItems = [
   },
 ];
 
-export default function Home2Navbar() {
+export default function Home2Navbar({ showQuoteButton = true }) {
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -58,10 +60,7 @@ export default function Home2Navbar() {
       {/* Top Section */}
       <div className="hidden sm:block text-sm bg-gray-100">
         <div className="container mx-auto flex justify-between items-center py-2 px-6">
-          {/* Left Side: Location */}
           <div>📍 123 Main St, City, Country</div>
-
-          {/* Right Side: Call and Email */}
           <div className="flex space-x-6">
             <div>📞 +1 (234) 567-890</div>
             <div>✉️ info@domain.com</div>
@@ -73,7 +72,6 @@ export default function Home2Navbar() {
       {/* Main Navbar */}
       <div className="bg-white shadow-md">
         <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-0">
-          {/* Logo */}
           <Link href="/">
             <Image src="/Logo.png" alt="Logo" width={88} height={20} />
           </Link>
@@ -83,12 +81,16 @@ export default function Home2Navbar() {
             {navItems.map((nav) => (
               <div key={nav.item} className="relative group">
                 <Link
-                  className="flex gap-1 items-center cursor-pointer font-mono"
                   href={nav.href}
+                  className={clsx(
+                    "flex gap-1 items-center font-mono transition-colors duration-200",
+                    !nav.hasDropdown && "hover:text-primary",
+                    nav.hasDropdown && "cursor-pointer"
+                  )}
                 >
                   {nav.item}
                   {nav.hasDropdown && (
-                    <FaChevronDown className="w-[14px] h-[14px]" />
+                    <FaChevronDown className="w-[14px] h-[14px] transition-transform duration-200 group-hover:rotate-180" />
                   )}
                 </Link>
                 {nav.hasDropdown && nav.subItems.length > 0 && (
@@ -97,7 +99,7 @@ export default function Home2Navbar() {
                       <Link
                         key={sub.href}
                         href={sub.href}
-                        className="block px-4 py-2 hover:bg-gray-100"
+                        className="block px-4 py-2 hover:bg-gray-100 hover:text-primary transition-all duration-200"
                       >
                         {sub.label}
                       </Link>
@@ -107,10 +109,13 @@ export default function Home2Navbar() {
               </div>
             ))}
             {/* Search Button */}
-            <button className="flex items-center space-x-2 hover:text-blue-500">
+            <button
+              onClick={() => setShowSearch(true)}
+              className="flex items-center space-x-2 hover:text-primary transition-colors duration-200"
+            >
               <FaSearch className="w-4 h-4" />
             </button>
-            <Button text="Get a Quote" />
+            {showQuoteButton && <Button text="Get a Quote" />}
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -138,7 +143,6 @@ export default function Home2Navbar() {
             </button>
           </div>
 
-          {/* Top Section in Mobile Menu */}
           <div className="text-sm text-gray-700 mb-6">
             <div className="mb-2">📍 123 Main St, City, Country</div>
             <div className="flex flex-col space-y-1">
@@ -159,6 +163,25 @@ export default function Home2Navbar() {
           ))}
 
           <Button text="Get a Quote" onClick={() => setIsOpen(false)} />
+        </div>
+      )}
+
+      {/* Search Bar Popup */}
+      {showSearch && (
+        <div className="fixed inset-0 bg-black/50 flex items-start justify-center z-50 pt-24">
+          <div className="bg-white w-full max-w-md mx-4 rounded-lg shadow-lg relative p-4">
+            <button
+              onClick={() => setShowSearch(false)}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+            >
+              <FaTimes className="text-lg" />
+            </button>
+            <input
+              type="text"
+              placeholder="Search..."
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
         </div>
       )}
     </nav>

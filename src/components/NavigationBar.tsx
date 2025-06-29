@@ -17,6 +17,7 @@ const navItems = [
       { label: "Home 1", href: "/" },
       { label: "Home 2", href: "/home2" },
       { label: "Home 3", href: "/home3" },
+      { label: "Home 4", href: "/home4" },
     ],
   },
   {
@@ -66,12 +67,16 @@ export default function Navbar() {
           {navItems.map((nav) => (
             <div key={nav.item} className="relative group">
               <Link
-                className="flex gap-1 items-center cursor-pointer font-mono"
                 href={nav.href}
+                className={clsx(
+                  "flex gap-1 items-center font-mono transition-colors duration-200",
+                  !nav.hasDropdown && "hover:text-primary",
+                  nav.hasDropdown && "cursor-pointer"
+                )}
               >
                 {nav.item}
                 {nav.hasDropdown && (
-                  <FaChevronDown className="w-[14px] h-[14px]" />
+                  <FaChevronDown className="w-[14px] h-[14px] transition-transform duration-200 group-hover:rotate-180" />
                 )}
               </Link>
               {nav.hasDropdown && nav.subItems.length > 0 && (
@@ -80,7 +85,7 @@ export default function Navbar() {
                     <Link
                       key={sub.href}
                       href={sub.href}
-                      className="block px-4 py-2 hover:bg-muted"
+                      className="block px-4 py-2 hover:bg-muted hover:text-primary transition-all duration-200 hover:bg-gray-100"
                     >
                       {sub.label}
                     </Link>
