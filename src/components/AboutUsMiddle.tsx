@@ -20,7 +20,7 @@ const AboutUsMiddle = () => {
         </div>
 
         {/* Right: Total Projects */}
-        <div className="w-full md:w-1/2 h-64 md:h-[500px] flex justify-center p-4">
+        <div className="w-full md:w-1/2 h-64 md:h-[500px] flex justify-center items-center p-4">
           <TotalProjects isVertical />
         </div>
       </div>
