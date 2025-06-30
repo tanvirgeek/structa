@@ -5,7 +5,9 @@ import Footer from "@/components/Footer";
 import Home2Horizontal from "@/components/Home2Horizontal";
 import Home2Navbar from "@/components/Home2Navbar";
 import Home3Image from "@/components/Home3Image";
+import Home4FeaturedProjects from "@/components/Home4FeaturedProjects";
 import Home4Hero from "@/components/Home4Hero";
+import Home4Services from "@/components/Home4Services";
 import React from "react";
 
 const Home4 = () => {
@@ -29,6 +31,8 @@ const Home4 = () => {
       <div className="bg-background">
         <AboutDescription />
         <AboutUsMiddle />
+        <Home4FeaturedProjects />
+        <Home4Services />
         <Home2Experts />
         <Home2Horizontal />
         <Footer />
