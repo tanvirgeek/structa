@@ -1,13 +1,16 @@
 import AboutDescription from "@/components/AboutDescription";
 import AboutUsMiddle from "@/components/AboutUsMiddle";
+import ExcitedToStart from "@/components/ExcitedToStart";
 import Home2Experts from "@/components/ExpertTeam";
 import Footer from "@/components/Footer";
 import Home2Horizontal from "@/components/Home2Horizontal";
 import Home2Navbar from "@/components/Home2Navbar";
 import Home3Image from "@/components/Home3Image";
+import Home4Blog from "@/components/Home4Blog";
 import Home4FeaturedProjects from "@/components/Home4FeaturedProjects";
 import Home4Hero from "@/components/Home4Hero";
 import Home4Services from "@/components/Home4Services";
+import Home4WhereTrustMeets from "@/components/Home4WhereTrustMeets";
 import React from "react";
 
 const Home4 = () => {
@@ -33,8 +36,12 @@ const Home4 = () => {
         <AboutUsMiddle />
         <Home4FeaturedProjects />
         <Home4Services />
+        <Home4WhereTrustMeets />
+
         <Home2Experts />
+        <Home4Blog />
         <Home2Horizontal />
+        <ExcitedToStart />
         <Footer />
       </div>
     </div>
