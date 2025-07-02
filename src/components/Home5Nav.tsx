@@ -47,7 +47,7 @@ const navItems = [
   },
 ];
 
-export default function Home3Navigation() {
+export default function Home5Nav() {
   const [isLeftPanelOpen, setIsLeftPanelOpen] = useState(false);
   const [isRightPanelOpen, setIsRightPanelOpen] = useState(false);
 
@@ -92,15 +92,15 @@ export default function Home3Navigation() {
               )}
             </div>
           ))}
-
-          {/* Six Dots Icon */}
-          <button
-            className="text-foreground text-2xl hidden lg:block"
-            onClick={() => setIsRightPanelOpen(true)}
-          >
-            <FaTh />
-          </button>
         </div>
+
+        {/* Six Dots Icon */}
+        <button
+          className="text-foreground text-2xl hidden lg:block"
+          onClick={() => setIsRightPanelOpen(true)}
+        >
+          <FaTh />
+        </button>
 
         {/* Mobile Menu Toggle */}
         <button
