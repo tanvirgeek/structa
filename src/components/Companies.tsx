@@ -13,7 +13,7 @@ const logos = [
 
 export default function Comapnies() {
   return (
-    <div className="w-full overflow-hidden bg-white py-12">
+    <div className="w-full overflow-hidden bg-background py-12">
       <div className="relative w-full">
         <div className="flex gap-10 whitespace-nowrap logo-marquee">
           {[...logos, ...logos].map((logo, index) => (

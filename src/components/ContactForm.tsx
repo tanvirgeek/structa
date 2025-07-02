@@ -31,7 +31,7 @@ export default function ContactForm() {
   return (
     <div className="p-8 border border-gray-300">
       <h4 className="mb-8">Send Us Message</h4>
-      <form onSubmit={handleSubmit} className="max-w-3xl mx-auto bg-white">
+      <form onSubmit={handleSubmit} className="max-w-3xl mx-auto bg-background">
         {/* Row 1: Name & Phone */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <input
@@ -67,7 +67,7 @@ export default function ContactForm() {
             name="projectType"
             value={form.projectType}
             onChange={handleChange}
-            className="w-full border-b border-gray-600 focus:outline-none p-2 bg-white"
+            className="w-full border-b border-gray-600 focus:outline-none p-2 bg-background"
           >
             <option value="">Select Project Type</option>
             <option value="Residential Building">Residential Building</option>

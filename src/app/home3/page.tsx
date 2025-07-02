@@ -21,7 +21,7 @@ const Home3 = () => {
       </div>
 
       {/* Sticky Navigation */}
-      <div className="sticky top-0 z-50 bg-white shadow-md">
+      <div className="sticky top-0 z-50 bg-background shadow-md">
         <Home3Navigation />
       </div>
 

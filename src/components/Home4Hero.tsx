@@ -26,7 +26,7 @@ const fadeRight = {
 
 const Home4Hero: React.FC = () => {
   return (
-    <section className="container app-section relative overflow-hidden bg-white">
+    <section className="container app-section relative overflow-hidden bg-background">
       <motion.div
         variants={containerVariants}
         initial="hidden"

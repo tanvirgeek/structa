@@ -13,7 +13,7 @@ import NavigationBar from "@/components/NavigationBar";
 const About = () => {
   return (
     <div>
-      <div className="sticky top-0 z-50 bg-white shadow-md">
+      <div className="sticky top-0 z-50 bg-background shadow-md">
         <NavigationBar />
       </div>
       <PageHero heading={`Crafting\nstructures for`} text="Contact With Us" />

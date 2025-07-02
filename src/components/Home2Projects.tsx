@@ -56,13 +56,13 @@ export default function ImageSlider() {
       {/* Scroll Buttons */}
       <button
         onClick={scrollLeft}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow hover:bg-gray-200"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-background p-2 rounded-full shadow hover:bg-gray-200"
       >
         <FaChevronLeft size={20} />
       </button>
       <button
         onClick={scrollRight}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow hover:bg-gray-200"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-background p-2 rounded-full shadow hover:bg-gray-200"
       >
         <FaChevronRight size={20} />
       </button>
@@ -82,7 +82,7 @@ export default function ImageSlider() {
                 className="object-cover"
                 sizes="400px"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
+              <div className="absolute bottom-0 left-0 right-0 bg-foreground/60 text-background p-4">
                 <h3 className="!text-primary font-bold">{project.title}</h3>
                 <p className="text-sm">{project.description}</p>
               </div>

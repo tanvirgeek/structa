@@ -77,7 +77,7 @@ export default function Home3Navigation() {
               </Link>
 
               {nav.hasDropdown && nav.subItems.length > 0 && (
-                <div className="absolute left-0 top-full mt-2 bg-white shadow-md rounded-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-200 min-w-[160px] py-2 z-50">
+                <div className="absolute left-0 top-full mt-2 bg-background shadow-md rounded-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-200 min-w-[160px] py-2 z-50">
                   {nav.subItems.map((sub) => (
                     <Link
                       key={sub.href}
@@ -113,7 +113,7 @@ export default function Home3Navigation() {
       {/* Mobile Left Menu */}
       <div
         className={clsx(
-          "fixed top-0 left-0 h-full w-[80%] max-w-xs bg-white text-foreground shadow-md transform transition-transform duration-300 z-40 p-6 overflow-y-auto",
+          "fixed top-0 left-0 h-full w-[80%] max-w-xs bg-background text-foreground shadow-md transform transition-transform duration-300 z-40 p-6 overflow-y-auto",
           isLeftPanelOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
@@ -141,7 +141,7 @@ export default function Home3Navigation() {
       {/* Right Panel (for md+ screens) */}
       <div
         className={clsx(
-          "fixed top-0 right-0 h-full w-[80%] max-w-md bg-white text-foreground shadow-md transform transition-transform duration-300 z-40 p-6 overflow-y-auto md:block hidden",
+          "fixed top-0 right-0 h-full w-[80%] max-w-md bg-background text-foreground shadow-md transform transition-transform duration-300 z-40 p-6 overflow-y-auto md:block hidden",
           isRightPanelOpen ? "translate-x-0" : "translate-x-full"
         )}
       >

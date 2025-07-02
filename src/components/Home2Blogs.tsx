@@ -76,13 +76,13 @@ export default function BlogSlider() {
         {/* Scroll Buttons */}
         <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow rounded-full p-2 hidden md:block"
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-background shadow rounded-full p-2 hidden md:block"
         >
           <FaChevronLeft className="text-xl" />
         </button>
         <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white shadow rounded-full p-2 hidden md:block"
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-background shadow rounded-full p-2 hidden md:block"
         >
           <FaChevronRight className="text-xl" />
         </button>
@@ -94,7 +94,7 @@ export default function BlogSlider() {
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="bg-white rounded-xl shadow-sm group w-[280px] flex-shrink-0 inline-block"
+              className="bg-background rounded-xl shadow-sm group w-[280px] flex-shrink-0 inline-block"
             >
               <div className="w-full h-56 overflow-hidden relative">
                 <Image

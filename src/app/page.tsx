@@ -15,7 +15,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 export default function Home() {
   return (
     <div className="relative">
-      <div className="sticky top-0 z-50 bg-white shadow-md">
+      <div className="sticky top-0 z-50 bg-background shadow-md">
         <NavigationBar />
       </div>
       <Hero />

@@ -116,7 +116,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full border-t border-gray-300 mt-12">
-        <div className="font-bold max-w-7xl mx-auto px-6 py-4 text-center text-black-500 text-sm flex items-center justify-center">
+        <div className="font-bold max-w-7xl mx-auto px-6 py-4 text-center text-foreground-500 text-sm flex items-center justify-center">
           © {new Date().getFullYear()} Themeadapt. All rights reserved.
         </div>
       </div>

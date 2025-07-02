@@ -25,12 +25,12 @@ const Home4Blog = () => {
                 className="object-cover"
               />
               {/* Gradient Overlay */}
-              <div className="absolute bottom-0 w-full bg-gradient-to-t from-black via-black/70 to-transparent text-white p-4">
+              <div className="absolute bottom-0 w-full bg-gradient-to-t from-foreground via-foreground/70 to-transparent text-background p-4">
                 <p className="text-xs text-gray-300">by tanvirgeek</p>
-                <h3 className="font-semibold !text-white">
+                <h3 className="font-semibold !text-background">
                   Building a Sustainable Future
                 </h3>
-                <hr className="my-2 border-white/30" />
+                <hr className="my-2 border-background/30" />
                 <div className="flex justify-between text-sm">
                   <span className="text-primary font-medium">Construction</span>
                   <span className="text-gray-300">August 7, 2025</span>

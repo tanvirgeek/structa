@@ -17,7 +17,7 @@ const Home2 = () => {
   return (
     <div>
       <div>
-        <div className="sticky top-0 z-50 bg-white shadow-md">
+        <div className="sticky top-0 z-50 bg-background shadow-md">
           <Home2Navbar />
         </div>
         <Home2Hero />

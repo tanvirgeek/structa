@@ -15,7 +15,7 @@ const Home4Services = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-white py-16 px-6 md:px-20">
+    <section className="bg-background py-16 px-6 md:px-20">
       <div className="max-w-5xl mx-auto text-center">
         {/* Top Heading */}
         <h6 className="mb-4">Our Services</h6>
@@ -58,7 +58,7 @@ const Home4Services = () => {
               {/* Headline */}
               <h3
                 className={`text-xl font-semibold transition-colors duration-300 ${
-                  hoveredIndex === idx ? "!text-primary" : "text-black"
+                  hoveredIndex === idx ? "!text-primary" : "text-foreground"
                 }`}
               >
                 {service}

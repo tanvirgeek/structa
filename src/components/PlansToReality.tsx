@@ -26,7 +26,7 @@ export default function PlansToReality() {
                 </h4>
               </div>
 
-              <div className="bg-white rounded-lg overflow-hidden shadow-sm">
+              <div className="bg-background rounded-lg overflow-hidden shadow-sm">
                 <Image
                   src="/twoMen.png"
                   alt="Two construction workers in hard hats reviewing blueprints"

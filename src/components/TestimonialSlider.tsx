@@ -41,7 +41,7 @@ export default function TestimonialSlider() {
 
   return (
     <div className="app-section">
-      <div className="w-full md:w-[70%] mx-auto p-16 bg-black text-white font-sans relative overflow-hidden">
+      <div className="w-full md:w-[70%] mx-auto p-16 bg-foreground text-background font-sans relative overflow-hidden">
         <div className="relative h-72">
           {testimonials.map((testimonial, index) => (
             <div
@@ -71,7 +71,7 @@ export default function TestimonialSlider() {
               onClick={() => setCurrent(index)}
               className={clsx(
                 "w-3 h-3 rounded-full",
-                current === index ? "bg-white" : "bg-gray-600"
+                current === index ? "bg-background" : "bg-gray-600"
               )}
             />
           ))}

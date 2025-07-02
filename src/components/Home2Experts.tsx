@@ -50,14 +50,14 @@ const Home2Experts = () => {
             />
 
             {/* Overlay info */}
-            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white p-4">
+            <div className="absolute bottom-0 left-0 right-0 bg-foreground bg-opacity-60 text-background p-4">
               <h3 className="text-lg font-semibold">{expert.name}</h3>
               <p className="text-sm">{expert.designation}</p>
             </div>
 
             {/* LinkedIn icon on hover */}
-            <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-              <FaLinkedin className="text-white text-3xl" />
+            <div className="absolute inset-0 bg-foreground bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+              <FaLinkedin className="text-background text-3xl" />
             </div>
           </a>
         ))}

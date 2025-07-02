@@ -57,14 +57,14 @@ const Home4WhereTrustMeets = () => {
         </div>
 
         {/* Overlay Section */}
-        <div className="mt-8 md:mt-0 md:absolute w-full md:w-2/3 md:top-[250px] md:left-0 bg-black bg-opacity-80 text-white p-6 md:p-16 space-y-4 z-10">
+        <div className="mt-8 md:mt-0 md:absolute w-full md:w-2/3 md:top-[250px] md:left-0 bg-foreground bg-opacity-80 text-background p-6 md:p-16 space-y-4 z-10">
           {descriptions.map((item, index) => {
             const isOpen = openIndex === index;
 
             return (
               <div
                 key={index}
-                className="border-b border-white/20 overflow-hidden transition-all duration-500"
+                className="border-b border-background/20 overflow-hidden transition-all duration-500"
               >
                 <button
                   onClick={() => toggleDescription(index)}

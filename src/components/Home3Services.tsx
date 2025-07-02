@@ -53,7 +53,7 @@ const Home3Services: React.FC = () => {
             </div>
 
             {/* Overlay */}
-            <div className="absolute bottom-[-20%] left-1/2 transform -translate-x-1/2 bg-white p-4 w-3/4 shadow-lg transition-transform duration-300 ease-out">
+            <div className="absolute bottom-[-20%] left-1/2 transform -translate-x-1/2 bg-background p-4 w-3/4 shadow-lg transition-transform duration-300 ease-out">
               <h4 className="mb-2 text-center">{card.title}</h4>
               <button className="text-primary hover:text-blue-700 font-medium block mx-auto cursor-pointer transition-colors duration-300">
                 View Details

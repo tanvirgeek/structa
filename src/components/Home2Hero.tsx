@@ -51,7 +51,7 @@ const Home2Hero = () => {
         <div className="relative w-full mt-8">
           {!isPlaying && (
             <button
-              className="absolute inset-0 z-10 flex items-center justify-center w-full h-full bg-black/40 hover:bg-black/50 transition"
+              className="absolute inset-0 z-10 flex items-center justify-center w-full h-full bg-foreground/40 hover:bg-foreground/50 transition"
               onClick={handlePlay}
               aria-label="Play Video"
             >

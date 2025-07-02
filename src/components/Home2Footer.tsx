@@ -13,11 +13,11 @@ import Button from "./Button";
 
 const Home2Footer = () => {
   return (
-    <footer className="bg-black text-gray-300 pt-12 px-4 md:px-0">
+    <footer className="bg-foreground text-gray-300 pt-12 px-4 md:px-0">
       {/* Top Section */}
       <div className="container py-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-          <h3 className="!text-white mb-4 md:mb-0">
+          <h3 className="!text-background mb-4 md:mb-0">
             Building a better <br /> Future with Our Help
           </h3>
           <div className="w-full md:w-auto">
@@ -59,7 +59,7 @@ const Home2Footer = () => {
 
         {/* Column 2: Quick Links */}
         <div>
-          <h4 className="text-xl font-semibold !text-white mb-4">
+          <h4 className="text-xl font-semibold !text-background mb-4">
             Quick Links
           </h4>
           <ul className="space-y-2 text-gray-400">
@@ -88,7 +88,9 @@ const Home2Footer = () => {
 
         {/* Column 3: Services */}
         <div>
-          <h4 className="text-xl font-semibold !text-white mb-4">Services</h4>
+          <h4 className="text-xl font-semibold !text-background mb-4">
+            Services
+          </h4>
           <ul className="space-y-2 text-gray-400">
             <li>
               <Link href="/services/design" className="hover:text-gray-100">
@@ -118,7 +120,9 @@ const Home2Footer = () => {
 
         {/* Column 4: Contact */}
         <div>
-          <h4 className="text-xl font-semibold !text-white mb-4">Contact</h4>
+          <h4 className="text-xl font-semibold !text-background mb-4">
+            Contact
+          </h4>
           <ul className="space-y-2 text-gray-400">
             <li>
               Email:{" "}

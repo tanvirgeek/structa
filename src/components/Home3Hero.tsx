@@ -80,7 +80,7 @@ export default function Home3Hero() {
       </motion.div>
 
       {/* Hero Content */}
-      <div className="container px-4 md:px-0 relative z-10 text-white py-4 sm:py-6 md:py-16 flex flex-col justify-center md:justify-end h-full">
+      <div className="container px-4 md:px-0 relative z-10 text-background py-4 sm:py-6 md:py-16 flex flex-col justify-center md:justify-end h-full">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end w-full mb-4">
           <div className="flex-1 pr-0 sm:pr-4">
             <AnimatePresence mode="wait">
@@ -90,7 +90,7 @@ export default function Home3Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 1, delay: 0.5 }}
-                className="font-bold text-sm sm:text-lg !text-white !lowercase"
+                className="font-bold text-sm sm:text-lg !text-background !lowercase"
               >
                 #1 Construction Company
               </motion.h6>
@@ -100,7 +100,7 @@ export default function Home3Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.8 }}
-                className="font-bold !text-white"
+                className="font-bold !text-background"
                 dangerouslySetInnerHTML={{ __html: currentHero.title }}
               ></motion.h1>
             </AnimatePresence>
@@ -129,13 +129,13 @@ export default function Home3Hero() {
           <div className="flex gap-2 sm:gap-4 mt-2 sm:mt-0">
             <button
               onClick={handlePrev}
-              className="w-10 h-10 sm:w-12 sm:h-12 flex justify-center items-center rounded-full bg-black/50 text-white hover:bg-black/70"
+              className="w-10 h-10 sm:w-12 sm:h-12 flex justify-center items-center rounded-full bg-foreground/50 text-background hover:bg-foreground/70"
             >
               <FaArrowLeft />
             </button>
             <button
               onClick={handleNext}
-              className="w-10 h-10 sm:w-12 sm:h-12 flex justify-center items-center rounded-full bg-black/50 text-white hover:bg-black/70"
+              className="w-10 h-10 sm:w-12 sm:h-12 flex justify-center items-center rounded-full bg-foreground/50 text-background hover:bg-foreground/70"
             >
               <FaArrowRight />
             </button>

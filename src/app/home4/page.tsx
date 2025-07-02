@@ -20,7 +20,7 @@ const Home4 = () => {
       <div className="fixed top-0 left-0 w-full h-screen -z-10">
         <Home3Image />
       </div>
-      <div className="sticky top-0 z-50 bg-white shadow-md">
+      <div className="sticky top-0 z-50 bg-background shadow-md">
         <Home2Navbar showQuoteButton={false} />
       </div>
 

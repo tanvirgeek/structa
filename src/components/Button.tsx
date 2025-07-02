@@ -18,8 +18,8 @@ const Button = ({
     "group relative inline-flex items-center gap-2 px-6 py-3 rounded-lg font-mono font-medium overflow-hidden cursor-pointer self-start transition-all duration-300";
 
   const variantClasses = {
-    primary: "bg-primary text-white",
-    outline: "bg-white text-primary border border-primary",
+    primary: "bg-primary text-background",
+    outline: "bg-background text-primary border border-primary",
   };
 
   const overlayColors = {

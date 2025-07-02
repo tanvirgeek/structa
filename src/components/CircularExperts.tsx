@@ -10,21 +10,21 @@ const CircularExperts = () => {
           alt="Profile 1"
           width={48}
           height={48}
-          className="rounded-full absolute left-0 z-30 border-1 border-white"
+          className="rounded-full absolute left-0 z-30 border-1 border-background"
         />
         <Image
           src="/profile2.png"
           alt="Profile 2"
           width={48}
           height={48}
-          className="rounded-full absolute left-8 z-20 border-1 border-white"
+          className="rounded-full absolute left-8 z-20 border-1 border-background"
         />
         <Image
           src="/profile3.png"
           alt="Profile 3"
           width={48}
           height={48}
-          className="rounded-full absolute left-16 z-10 border-1 border-white"
+          className="rounded-full absolute left-16 z-10 border-1 border-background"
         />
       </div>
       <div>

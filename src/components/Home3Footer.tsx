@@ -101,7 +101,7 @@ const Home3Footer = () => {
             />
             <button
               type="submit"
-              className="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition"
+              className="bg-primary text-background px-4 py-2 rounded-r-lg hover:bg-blue-700 transition"
             >
               Subscribe
             </button>

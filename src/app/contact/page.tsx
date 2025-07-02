@@ -15,7 +15,7 @@ const OfficeMap = dynamic(() => import("@/components/OfficeMap"), {
 const Contact = () => {
   return (
     <div>
-      <div className="sticky top-0 z-50 bg-white shadow-md">
+      <div className="sticky top-0 z-50 bg-background shadow-md">
         <NavigationBar />
       </div>
       <PageHero

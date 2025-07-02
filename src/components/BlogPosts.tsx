@@ -60,7 +60,7 @@ const BlogPosts = () => {
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="bg-white rounded-xl overflow-hidden shadow-sm group"
+              className="bg-background rounded-xl overflow-hidden shadow-sm group"
             >
               <div className="w-full h-56 overflow-hidden relative">
                 <Image

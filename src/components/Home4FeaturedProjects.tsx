@@ -42,7 +42,7 @@ const Home4FeaturedProjects = () => {
   };
 
   return (
-    <section className="bg-black text-white">
+    <section className="bg-foreground text-background">
       <div className="flex flex-col md:flex-row gap-10 justify-between items-start app-section container">
         {/* Left Section */}
         <div className="flex flex-col justify-between md:w-1/3 w-full h-full md:min-h-[400px]">
@@ -58,13 +58,13 @@ const Home4FeaturedProjects = () => {
           <div className="flex gap-4">
             <button
               onClick={() => scroll("left")}
-              className="p-3 border border-white rounded-full hover:bg-white hover:text-black transition"
+              className="p-3 border border-background rounded-full hover:bg-background hover:text-foreground transition"
             >
               <FaChevronLeft />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="p-3 border border-white rounded-full hover:bg-white hover:text-black transition"
+              className="p-3 border border-background rounded-full hover:bg-background hover:text-foreground transition"
             >
               <FaChevronRight />
             </button>
@@ -74,7 +74,7 @@ const Home4FeaturedProjects = () => {
         {/* Right Section */}
         <div
           ref={scrollRef}
-          className="md:w-2/3 w-full overflow-x-auto whitespace-nowrap scrollbar-hide"
+          className="md:w-2/3 w-full overflow-x-auto whitespace-nowrap scrollbar-hidden"
         >
           {featuredProjects.map((project, idx) => (
             <div

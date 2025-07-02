@@ -40,7 +40,7 @@ const Home3FeaturedProjects: React.FC = () => {
           <h2>Featured Projects</h2>
           <Link
             href="/projects"
-            className="block mt-4 text-black hover:underline text-sm"
+            className="block mt-4 text-foreground hover:underline text-sm"
           >
             View All Projects
           </Link>
@@ -54,7 +54,7 @@ const Home3FeaturedProjects: React.FC = () => {
           </div>
           <Link
             href="/projects"
-            className="absolute right-0 -bottom-2 text-black hover:underline text-sm"
+            className="absolute right-0 -bottom-2 text-foreground hover:underline text-sm"
           >
             View All Projects
           </Link>
@@ -79,7 +79,7 @@ const Home3FeaturedProjects: React.FC = () => {
               objectFit="cover"
               className=""
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-white p-4">
+            <div className="absolute bottom-0 left-0 right-0 bg-background p-4">
               <h4>{project.title}</h4>
               <p>{project.description}</p>
             </div>

@@ -12,7 +12,7 @@ const Service = () => {
   return (
     <div className="min-h-screen">
       {/* Sticky Navigation Bar */}
-      <div className="sticky top-0 z-50 bg-white shadow-md">
+      <div className="sticky top-0 z-50 bg-background shadow-md">
         <NavigationBar />
       </div>
 

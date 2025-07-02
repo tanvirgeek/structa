@@ -70,7 +70,7 @@ export default function Home2Navbar({ showQuoteButton = true }) {
       </div>
 
       {/* Main Navbar */}
-      <div className="bg-white shadow-md">
+      <div className="bg-background shadow-md">
         <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-0">
           <Link href="/">
             <Image src="/Logo.png" alt="Logo" width={88} height={20} />
@@ -94,7 +94,7 @@ export default function Home2Navbar({ showQuoteButton = true }) {
                   )}
                 </Link>
                 {nav.hasDropdown && nav.subItems.length > 0 && (
-                  <div className="absolute left-0 top-full mt-2 bg-white shadow-md rounded-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-200 min-w-[160px] py-2 z-50">
+                  <div className="absolute left-0 top-full mt-2 bg-background shadow-md rounded-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-200 min-w-[160px] py-2 z-50">
                     {nav.subItems.map((sub) => (
                       <Link
                         key={sub.href}
@@ -132,7 +132,7 @@ export default function Home2Navbar({ showQuoteButton = true }) {
       {mounted && (
         <div
           className={clsx(
-            "fixed top-0 left-0 h-full w-[80%] max-w-xs bg-white text-gray-800 shadow-md transform transition-transform duration-300 md:hidden z-40 p-6 overflow-y-auto",
+            "fixed top-0 left-0 h-full w-[80%] max-w-xs bg-background text-gray-800 shadow-md transform transition-transform duration-300 md:hidden z-40 p-6 overflow-y-auto",
             isOpen ? "translate-x-0" : "-translate-x-full"
           )}
         >
@@ -168,8 +168,8 @@ export default function Home2Navbar({ showQuoteButton = true }) {
 
       {/* Search Bar Popup */}
       {showSearch && (
-        <div className="fixed inset-0 bg-black/50 flex items-start justify-center z-50 pt-24">
-          <div className="bg-white w-full max-w-md mx-4 rounded-lg shadow-lg relative p-4">
+        <div className="fixed inset-0 bg-foreground/50 flex items-start justify-center z-50 pt-24">
+          <div className="bg-background w-full max-w-md mx-4 rounded-lg shadow-lg relative p-4">
             <button
               onClick={() => setShowSearch(false)}
               className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
