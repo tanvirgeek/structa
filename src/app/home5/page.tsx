@@ -4,6 +4,7 @@ import Home2Blogs from "@/components/Home2Blogs";
 import Home3Footer from "@/components/Home3Footer";
 import Home3Image from "@/components/Home3Image";
 import Home3Services from "@/components/Home3Services";
+import Home5Hero from "@/components/Home5Hero";
 import Home5Nav from "@/components/Home5Nav";
 import VisionMission from "@/components/VisionMission";
 import React from "react";
@@ -20,6 +21,7 @@ const Home5 = () => {
         <Home5Nav />
       </div>
       <div className="bg-background">
+        <Home5Hero />
         <Commitment />
         <VisionMission />
       </div>
