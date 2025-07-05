@@ -6,6 +6,8 @@ import Home3Image from "@/components/Home3Image";
 import Home3Services from "@/components/Home3Services";
 import Home5Hero from "@/components/Home5Hero";
 import Home5Nav from "@/components/Home5Nav";
+import Home5Services from "@/components/Home5Services";
+import HowWeWork from "@/components/HowWeWork";
 import VisionMission from "@/components/VisionMission";
 import React from "react";
 
@@ -22,6 +24,7 @@ const Home5 = () => {
       </div>
       <div className="bg-background">
         <Home5Hero />
+        <Home5Services />
         <Commitment />
         <VisionMission />
       </div>
@@ -29,6 +32,7 @@ const Home5 = () => {
       {/* Transparent Section */}
       <div className="h-screen"></div>
       <div className="bg-background">
+        <HowWeWork />
         <Home3Services />
         <ExcitedToStart />
         <Home2Blogs />

@@ -1,12 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import Button from "./Button";
+import VisionMission from "./VisionMission";
 
 const Commitment = () => {
   return (
     <div>
-      <div className="app-section container flex flex-col md:flex-row gap-3">
-        <div className="w-full md:w-[50%] aspect-square relative">
+      <div className="app-section container grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-x-12 relative">
+        {/* Left Image Block */}
+        <div className="w-full aspect-square relative">
           <Image
             src="/commitment.png"
             alt="Commitment"
@@ -14,7 +18,9 @@ const Commitment = () => {
             className="object-cover"
           />
         </div>
-        <div className="flex flex-col w-full  md:w-[50%] pt-6 justify-center gap-3">
+
+        {/* Right Content */}
+        <div className="flex flex-col w-full justify-start gap-3">
           <h6>Our Commitment</h6>
           <h2>We embrace the uniqueness of every single project</h2>
           <p>
@@ -23,7 +29,6 @@ const Commitment = () => {
             innovation, and client satisfaction. With a strong foundation built
             on years of industry expertise.
           </p>
-
           <span>
             <Button text="More About" />
           </span>

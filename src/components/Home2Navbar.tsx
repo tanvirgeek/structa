@@ -78,29 +78,33 @@ export default function Home2Navbar({ showQuoteButton = true }) {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-10 text-gray-800 items-center">
+          <div className="hidden md:flex gap-10 text-foreground items-center">
             {navItems.map((nav) => (
-              <div key={nav.item} className="relative group">
-                <Link
-                  href={nav.href}
-                  className={clsx(
-                    "flex gap-1 items-center font-mono transition-colors duration-200",
-                    !nav.hasDropdown && "hover:text-primary",
-                    nav.hasDropdown && "cursor-pointer"
-                  )}
-                >
-                  {nav.item}
+              <div key={nav.item} className="relative group inline-block">
+                {/* Main Nav Link + Dropdown Icon */}
+                <div className="flex gap-1 items-center font-mono cursor-pointer">
+                  <Link
+                    href={nav.href}
+                    className={clsx(
+                      "transition-colors duration-200",
+                      !nav.hasDropdown && "hover:text-primary"
+                    )}
+                  >
+                    {nav.item}
+                  </Link>
                   {nav.hasDropdown && (
                     <FaChevronDown className="w-[14px] h-[14px] transition-transform duration-200 group-hover:rotate-180" />
                   )}
-                </Link>
+                </div>
+
+                {/* Dropdown Items */}
                 {nav.hasDropdown && nav.subItems.length > 0 && (
-                  <div className="absolute left-0 top-full mt-2 bg-background shadow-md rounded-lg opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-200 min-w-[160px] py-2 z-50">
+                  <div className="absolute left-0 top-full mt-2 bg-background shadow-md rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[160px] py-2 z-50">
                     {nav.subItems.map((sub) => (
                       <Link
                         key={sub.href}
                         href={sub.href}
-                        className="block px-4 py-2 hover:bg-gray-100 hover:text-primary transition-all duration-200"
+                        className="block px-4 py-2 hover:bg-muted hover:text-primary hover:bg-gray-100 transition-all duration-200"
                       >
                         {sub.label}
                       </Link>
