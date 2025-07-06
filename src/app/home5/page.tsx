@@ -1,12 +1,15 @@
 import Commitment from "@/components/Commitment";
+import Comapnies from "@/components/Companies";
 import ExcitedToStart from "@/components/ExcitedToStart";
 import Home2Blogs from "@/components/Home2Blogs";
-import Home3Footer from "@/components/Home3Footer";
 import Home3Image from "@/components/Home3Image";
 import Home3Services from "@/components/Home3Services";
+import Home5Footer from "@/components/Home5Footer";
 import Home5Hero from "@/components/Home5Hero";
 import Home5Nav from "@/components/Home5Nav";
+import Home5Projects from "@/components/Home5Projects";
 import Home5Services from "@/components/Home5Services";
+import Home5Testimonial from "@/components/Home5Testimonial";
 import HowWeWork from "@/components/HowWeWork";
 import VisionMission from "@/components/VisionMission";
 import React from "react";
@@ -33,10 +36,13 @@ const Home5 = () => {
       <div className="h-screen"></div>
       <div className="bg-background">
         <HowWeWork />
+        <Home5Projects />
+        <Home5Testimonial />
         <Home3Services />
+        <Comapnies />
         <ExcitedToStart />
         <Home2Blogs />
-        <Home3Footer />
+        <Home5Footer />
       </div>
     </div>
   );

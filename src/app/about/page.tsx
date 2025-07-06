@@ -4,7 +4,7 @@ import AboutUsMiddle from "@/components/AboutUsMiddle";
 import ExcitedToStart from "@/components/ExcitedToStart";
 import ExpertTeam from "@/components/ExpertTeam";
 import React from "react";
-import CompanyLogoMarquee from "@/components/Companies";
+import Comapnies from "@/components/Companies";
 import PageHeroImage from "@/components/PageHeroImage";
 import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
@@ -22,7 +22,7 @@ const About = () => {
       <AboutUsMiddle />
       <ExpertTeam />
       <ClientRecommendationSlider />
-      <CompanyLogoMarquee />
+      <Comapnies />
       <ExcitedToStart />
       <Footer />
     </div>
