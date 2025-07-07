@@ -8,7 +8,7 @@ import clsx from "clsx";
 import Button from "./Button";
 import MobileNavItem from "./MobileNavItems";
 
-const navItems = [
+export const navItems = [
   {
     item: "Home",
     href: "/",
@@ -24,19 +24,16 @@ const navItems = [
   {
     item: "About",
     href: "/about",
-    hasDropdown: true,
-    subItems: [
-      { label: "Mission", href: "/about#mission" },
-      { label: "Vision", href: "/about#vision" },
-    ],
+    hasDropdown: false,
+    subItems: [],
   },
   {
     item: "Services",
     href: "/services",
     hasDropdown: true,
     subItems: [
-      { label: "Consulting", href: "/services/consulting" },
-      { label: "Design", href: "/services/design" },
+      { label: "Services 1", href: "/services1" },
+      { label: "Services 2", href: "/services2" },
     ],
   },
   {
@@ -69,15 +66,19 @@ export default function Navbar() {
             <div key={nav.item} className="relative group inline-block">
               {/* Main Nav Link + Dropdown Icon */}
               <div className="flex gap-1 items-center font-mono cursor-pointer">
-                <Link
-                  href={nav.href}
-                  className={clsx(
-                    "transition-colors duration-200",
-                    !nav.hasDropdown && "hover:text-primary"
-                  )}
-                >
-                  {nav.item}
-                </Link>
+                {nav.hasDropdown ? (
+                  <span className="transition-colors duration-200 text-foreground">
+                    {nav.item}
+                  </span>
+                ) : (
+                  <Link
+                    href={nav.href}
+                    className="transition-colors duration-200 hover:text-primary"
+                  >
+                    {nav.item}
+                  </Link>
+                )}
+
                 {nav.hasDropdown && (
                   <FaChevronDown className="w-[14px] h-[14px] transition-transform duration-200 group-hover:rotate-180" />
                 )}

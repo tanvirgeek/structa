@@ -7,45 +7,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import Button from "./Button";
 import MobileNavItem from "./MobileNavItems";
-
-const navItems = [
-  {
-    item: "Home",
-    href: "/",
-    hasDropdown: true,
-    subItems: [
-      { label: "Home 1", href: "/" },
-      { label: "Home 2", href: "/home2" },
-      { label: "Home 3", href: "/home3" },
-      { label: "Home 4", href: "/home4" },
-      { label: "Home 5", href: "/home5" },
-    ],
-  },
-  {
-    item: "About",
-    href: "/about",
-    hasDropdown: true,
-    subItems: [
-      { label: "Mission", href: "/about#mission" },
-      { label: "Vision", href: "/about#vision" },
-    ],
-  },
-  {
-    item: "Services",
-    href: "/services",
-    hasDropdown: true,
-    subItems: [
-      { label: "Consulting", href: "/services/consulting" },
-      { label: "Design", href: "/services/design" },
-    ],
-  },
-  {
-    item: "Contact",
-    href: "/contact",
-    hasDropdown: false,
-    subItems: [],
-  },
-];
+import { navItems } from "./NavigationBar";
 
 export default function Home5Nav() {
   const [isLeftPanelOpen, setIsLeftPanelOpen] = useState(false);
@@ -65,15 +27,19 @@ export default function Home5Nav() {
             <div key={nav.item} className="relative group inline-block">
               {/* Main Nav Link + Dropdown Icon */}
               <div className="flex gap-1 items-center font-mono cursor-pointer">
-                <Link
-                  href={nav.href}
-                  className={clsx(
-                    "transition-colors duration-200",
-                    !nav.hasDropdown && "hover:text-primary"
-                  )}
-                >
-                  {nav.item}
-                </Link>
+                {nav.hasDropdown ? (
+                  <span className="transition-colors duration-200 text-foreground">
+                    {nav.item}
+                  </span>
+                ) : (
+                  <Link
+                    href={nav.href}
+                    className="transition-colors duration-200 hover:text-primary"
+                  >
+                    {nav.item}
+                  </Link>
+                )}
+
                 {nav.hasDropdown && (
                   <FaChevronDown className="w-[14px] h-[14px] transition-transform duration-200 group-hover:rotate-180" />
                 )}
