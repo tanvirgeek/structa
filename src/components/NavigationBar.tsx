@@ -22,18 +22,45 @@ export const navItems = [
     ],
   },
   {
-    item: "About",
-    href: "/about",
-    hasDropdown: false,
-    subItems: [],
+    item: "Pages",
+    href: "",
+    hasDropdown: true,
+    subItems: [
+      { label: "About Us", href: "/about" },
+      { label: "Team", href: "/team" },
+      { label: "Team Details", href: "/team-details" },
+      { label: "FAQs", href: "/faqs" },
+      { label: "Error 404", href: "/404" },
+    ],
   },
   {
     item: "Services",
-    href: "/services",
+    href: "",
     hasDropdown: true,
     subItems: [
       { label: "Services 1", href: "/services1" },
       { label: "Services 2", href: "/services2" },
+      { label: "Service Details", href: "/services-details" },
+    ],
+  },
+  {
+    item: "Project",
+    href: "",
+    hasDropdown: true,
+    subItems: [
+      { label: "Projects 1", href: "/project1" },
+      { label: "Projects 2", href: "/project2" },
+      { label: "Project Details", href: "/projects details" },
+    ],
+  },
+  {
+    item: "Blog",
+    href: "",
+    hasDropdown: true,
+    subItems: [
+      { label: "Blog 1", href: "/blog1" },
+      { label: "Blog 2", href: "/blog2" },
+      { label: "Blog Details", href: "/blog details" },
     ],
   },
   {
