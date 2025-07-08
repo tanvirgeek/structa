@@ -22,7 +22,7 @@ export default function Home5Nav() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-10 text-foreground items-center">
+        <div className="hidden md:flex gap-8 text-foreground items-center">
           {navItems.map((nav) => (
             <div key={nav.item} className="relative group inline-block">
               {/* Main Nav Link + Dropdown Icon */}

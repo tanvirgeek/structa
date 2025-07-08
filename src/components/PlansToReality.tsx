@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function PlansToReality() {
   return (
-    <section className="bg-gray-50">
-      <div className="max-w-7xl app-section">
+    <section className="app-section bg-background-soft">
+      <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Main Heading */}
           <div className="space-y-4">

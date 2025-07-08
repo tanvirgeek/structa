@@ -12,8 +12,8 @@ import Image from "next/image";
 
 const Home3Footer = () => {
   return (
-    <footer className="bg-background text-gray-800 pt-12">
-      <div className="app-section max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="app-section bg-background text-gray-800 pt-12">
+      <div className="container max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Column 1: Contact */}
         <div>
           <h4 className="text-xl font-semibold mb-4">Contact</h4>
