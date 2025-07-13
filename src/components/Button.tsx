@@ -1,11 +1,14 @@
 import { MdArrowOutward } from "react-icons/md";
 import clsx from "clsx";
+import Link from "next/link";
 
 interface ButtonProps {
   text: string;
   onClick?: () => void;
   classNames?: string;
-  variant?: "primary" | "outline"; // extend as needed
+  variant?: "primary" | "outline";
+  href?: string;
+  target?: "_blank" | "_self";
 }
 
 const Button = ({
@@ -13,6 +16,8 @@ const Button = ({
   onClick,
   classNames,
   variant = "primary",
+  href = "/",
+  target = "_self",
 }: ButtonProps) => {
   const baseClasses =
     "group relative inline-flex items-center gap-2 px-6 py-3 rounded-lg font-mono font-medium overflow-hidden cursor-pointer self-start transition-all duration-300";
@@ -27,11 +32,8 @@ const Button = ({
     outline: "bg-green-800",
   };
 
-  return (
-    <button
-      onClick={onClick}
-      className={clsx(baseClasses, variantClasses[variant], classNames)}
-    >
+  const content = (
+    <>
       {/* Sliding overlay */}
       <span
         className={clsx(
@@ -39,12 +41,32 @@ const Button = ({
           overlayColors[variant]
         )}
       />
-
       {/* Content */}
       <span className="relative z-10 flex items-center gap-2">
         {text}
         <MdArrowOutward className="text-lg transform transition-transform duration-300 group-hover:rotate-[405deg]" />
       </span>
+    </>
+  );
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        target={target}
+        className={clsx(baseClasses, variantClasses[variant], classNames)}
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <button
+      onClick={onClick}
+      className={clsx(baseClasses, variantClasses[variant], classNames)}
+    >
+      {content}
     </button>
   );
 };
