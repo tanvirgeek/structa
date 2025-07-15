@@ -44,12 +44,12 @@ export const navItems = [
     ],
   },
   {
-    item: "Project",
+    item: "Projects",
     href: "",
     hasDropdown: true,
     subItems: [
-      { label: "Projects 1", href: "/project1" },
-      { label: "Projects 2", href: "/project2" },
+      { label: "Projects 1", href: "/projects1" },
+      { label: "Projects 2", href: "/projects2" },
       { label: "Project Details", href: "/projects details" },
     ],
   },
