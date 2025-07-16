@@ -7,7 +7,6 @@ type Project = {
   title: string;
   category: string;
   imageSrc: string;
-  height: number;
 };
 
 const categories = [
@@ -24,49 +23,41 @@ const projects: Project[] = [
     title: "Modern Villa",
     category: "Residential",
     imageSrc: "/project1.png",
-    height: 300,
   },
   {
     title: "Office Tower",
     category: "Commercial",
     imageSrc: "/project2.png",
-    height: 400,
   },
   {
     title: "Factory Complex",
     category: "Industrial",
     imageSrc: "/project3.png",
-    height: 350,
   },
   {
     title: "Kitchen Makeover",
     category: "Renovation",
     imageSrc: "/project1.png",
-    height: 250,
   },
   {
     title: "Luxury Living Room",
     category: "Interior",
     imageSrc: "/project2.png",
-    height: 320,
   },
   {
     title: "Modern Apartment",
     category: "Residential",
     imageSrc: "/project3.png",
-    height: 280,
   },
   {
-    title: "Interior Harmony",
+    title: "Penthouse Concept",
     category: "Interior",
     imageSrc: "/project1.png",
-    height: 370,
   },
   {
     title: "Shopping Complex",
     category: "Commercial",
     imageSrc: "/project2.png",
-    height: 300,
   },
 ];
 
@@ -80,17 +71,17 @@ const Projects2Component = () => {
 
   return (
     <section className="app-section">
-      <div className="container">
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+      <div className="container space-y-8">
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center gap-3">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-full text-sm border transition ${
                 activeCategory === cat
-                  ? "bg-primary text-background border-primary"
-                  : "bg-background text-foreground border-gray-300 hover:bg-gray-100"
+                  ? "bg-primary text-white border-primary"
+                  : "bg-white text-gray-700 border-gray-300 hover:bg-gray-100"
               }`}
             >
               {cat}
@@ -98,17 +89,14 @@ const Projects2Component = () => {
           ))}
         </div>
 
-        {/* Masonry Columns - max 2 */}
-        <div className="columns-1 md:columns-2 gap-4 space-y-4">
+        {/* Masonry Style Grid */}
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
           {filteredProjects.map((project, index) => (
             <div
               key={index}
-              className="break-inside-avoid rounded-lg overflow-hidden shadow-md bg-background"
+              className="break-inside-avoid bg-white rounded-lg shadow-md overflow-hidden"
             >
-              <div
-                className="relative w-full"
-                style={{ height: `${project.height}px` }}
-              >
+              <div className="relative w-full h-[300px]">
                 <Image
                   src={project.imageSrc}
                   alt={project.title}
@@ -117,10 +105,8 @@ const Projects2Component = () => {
                 />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-foreground">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-foreground">{project.category}</p>
+                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <p className="text-sm text-gray-500">{project.category}</p>
               </div>
             </div>
           ))}
