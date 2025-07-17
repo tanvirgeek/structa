@@ -2,7 +2,7 @@ import ExcitedToStart from '@/components/ExcitedToStart'
 import Footer from '@/components/Footer'
 import Home2Navbar from '@/components/Home2Navbar'
 import PageHero from '@/components/PageHero'
-import Projects2Component from '@/components/Projects1Component'
+import Projects2Component from '@/components/Projects2Component'
 import React from 'react'
 
 const Projects2 = () => {
