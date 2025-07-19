@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -56,12 +56,19 @@ const BlogsComponent = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 3;
 
+  const blogRef = useRef<HTMLDivElement | null>(null);
+
   const startIndex = (currentPage - 1) * blogsPerPage;
   const currentBlogs = blogs.slice(startIndex, startIndex + blogsPerPage);
   const totalPages = Math.ceil(blogs.length / blogsPerPage);
 
+  const handlePageChange = (num: number) => {
+    setCurrentPage(num);
+    blogRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className="">
+    <section ref={blogRef}>
       <div className="container">
         <div className="grid gap-8">
           {currentBlogs.map((blog) => (
@@ -110,7 +117,7 @@ const BlogsComponent = () => {
             (num) => (
               <button
                 key={num}
-                onClick={() => setCurrentPage(num)}
+                onClick={() => handlePageChange(num)}
                 className={`w-9 h-9 rounded-full border ${
                   currentPage === num
                     ? "bg-primary text-white border-primary"
