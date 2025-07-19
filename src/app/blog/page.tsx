@@ -1,5 +1,7 @@
 import BlogsComponent from "@/components/BlogComponent";
 import BlogRightbar from "@/components/BlogRightbar";
+import ExcitedToStart from "@/components/ExcitedToStart";
+import Footer from "@/components/Footer";
 import NavigationBar from "@/components/NavigationBar";
 import PageHero from "@/components/PageHero";
 import React from "react";
@@ -19,9 +21,11 @@ const Blog = () => {
 
         {/* 1/3 Width Section */}
         <div className="w-full lg:w-1/3 bg-background p-6 rounded-xl shadow">
-          <BlogRightbar/>
+          <BlogRightbar />
         </div>
       </div>
+      <ExcitedToStart />
+      <Footer />
     </div>
   );
 };
