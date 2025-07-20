@@ -59,7 +59,7 @@ export const navItems = [
     hasDropdown: true,
     subItems: [
       { label: "Blog", href: "/blog" },
-      { label: "Blog Details", href: "/blog details" },
+      { label: "Blog Details", href: "/blogDetails" },
     ],
   },
   {
