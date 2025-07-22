@@ -40,7 +40,7 @@ export const navItems = [
     subItems: [
       { label: "Services 1", href: "/services1" },
       { label: "Services 2", href: "/services2" },
-      { label: "Service Details", href: "/services-details" },
+      { label: "Service Details", href: "/serviceDetails" },
     ],
   },
   {
