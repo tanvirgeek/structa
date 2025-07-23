@@ -2,6 +2,7 @@ import ExcitedToStart from "@/components/ExcitedToStart";
 import Footer from "@/components/Footer";
 import NavigationBar from "@/components/NavigationBar";
 import PageHero from "@/components/PageHero";
+import QuestionsAnswers from "@/components/QuestionsAnswers";
 import ServiceDetailsBody from "@/components/ServiceDetailsBody";
 import VideoPlayer from "@/components/VideoPlayer";
 import React from "react";
@@ -23,7 +24,7 @@ const ServiceDetails = () => {
       </div>
 
       <ServiceDetailsBody />
-
+      <QuestionsAnswers />
       <ExcitedToStart />
       <Footer />
     </div>
