@@ -2,7 +2,6 @@ import BlogPosts from "@/components/BlogPosts";
 import Commitment from "@/components/Commitment";
 import ExcitedToStart from "@/components/ExcitedToStart";
 import ExpertTeam from "@/components/ExpertTeam";
-import FadeInOnScroll from "@/components/FadeInOnScroll";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
