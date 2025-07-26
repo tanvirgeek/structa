@@ -15,7 +15,7 @@ const TeamDetailsHero = () => {
   const member = {
     name: "Jane Doe",
     designation: "Senior Project Manager",
-    imageUrl: "/teamDetails.jpg",
+    imageUrl: "/TeamDetails.jpg",
     bio: `Jane has over 12 years of experience managing complex construction projects across multiple sectors. Her leadership and strategic thinking have driven the successful completion of dozens of large-scale builds with a focus on safety, efficiency, and client satisfaction.`,
     phone: "+1 (555) 123-4567",
     email: "jane.doe@example.com",
