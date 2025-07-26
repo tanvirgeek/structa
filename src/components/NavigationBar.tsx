@@ -28,7 +28,7 @@ export const navItems = [
     subItems: [
       { label: "About Us", href: "/about" },
       { label: "Team", href: "/team" },
-      { label: "Team Details", href: "team/details" },
+      { label: "Team Details", href: "/team/details" },
       { label: "FAQs", href: "/faqs" },
       { label: "Error 404", href: "/404" },
     ],
