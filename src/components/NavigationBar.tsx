@@ -50,7 +50,7 @@ export const navItems = [
     subItems: [
       { label: "Projects 1", href: "/projects1" },
       { label: "Projects 2", href: "/projects2" },
-      { label: "Project Details", href: "/projects details" },
+      { label: "Project Details", href: "/projectDetails" },
     ],
   },
   {
