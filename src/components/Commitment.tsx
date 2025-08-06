@@ -30,7 +30,7 @@ const Commitment = () => {
             on years of industry expertise.
           </p>
           <span>
-            <Button text="More About" />
+            <Button text="More About" href="/about" />
           </span>
         </div>
       </div>

@@ -133,7 +133,8 @@ export default function Home2Navbar({ showQuoteButton = true }) {
             />
           ))}
 
-          <Button text="Get a Quote" onClick={() => setIsOpen(false)} />
+
+          <Button text="Get a Quote" href="/contact" onClick={() => setIsOpen(false)} />
         </div>
       )}
 

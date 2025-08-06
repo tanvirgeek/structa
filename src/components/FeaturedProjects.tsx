@@ -7,23 +7,27 @@ const featuredProjects = [
     imageSrc: "/project1.png",
     title: "North Carolina Centre",
     description: "Building, Renovation",
+    href: "/projectDetails",
   },
   {
     imageSrc: "/project2.png",
     title: "Tranquil Heights Homes",
     description:
       "Offering comprehensive architectural services including conceptual design, drafting",
+    href: "/projectDetails",
   },
   {
     imageSrc: "/project1.png",
     title: "North Carolina Centre",
     description: "Building, Renovation",
+    href: "/projectDetails",
   },
   {
     imageSrc: "/project2.png",
     title: "Tranquil Heights Homes",
     description:
       "Offering comprehensive architectural services including conceptual design, drafting",
+    href: "/projectDetails",
   },
 ];
 
@@ -36,7 +40,7 @@ const FeaturedProjects = () => {
             <h6>Recent works</h6>
             <h2>Featured Projects</h2>
           </div>
-          <Link href={"/"} className="self-end underline text-sm">
+          <Link href={"/projects1"} className="self-end underline text-sm">
             view all projects
           </Link>
         </div>
@@ -46,11 +50,13 @@ const FeaturedProjects = () => {
           <div className="flex gap-5 flex-nowrap">
             {featuredProjects.map((item, index) => (
               <div key={index} className="min-w-[320px] flex-shrink-0">
-                <FeaturedProject
-                  imageSrc={item.imageSrc}
-                  title={item.title}
-                  description={item.description}
-                />
+                <Link href={item.href}>
+                  <FeaturedProject
+                    imageSrc={item.imageSrc}
+                    title={item.title}
+                    description={item.description}
+                  />
+                </Link>
               </div>
             ))}
           </div>

@@ -54,7 +54,7 @@ const Home5Hero = () => {
             className="flex justify-center md:justify-start gap-4 pt-4"
             variants={itemVariants}
           >
-            <Button text={"Get a Quote"} />
+            <Button text={"Get a Quote"} href="/contact"/>
             <Button text={"Learn More"} variant="outline" />
           </motion.div>
         </motion.div>

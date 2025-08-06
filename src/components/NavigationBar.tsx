@@ -126,7 +126,7 @@ export default function Navbar() {
               )}
             </div>
           ))}
-          <Button text="Get a Quote" />
+          <Button text="Get a Quote" href="/contact" />
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -164,7 +164,11 @@ export default function Navbar() {
             />
           ))}
 
-          <Button text="Get a Quote" onClick={() => setIsOpen(false)} />
+          <Button
+            text="Get a Quote"
+            href="/contact"
+            onClick={() => setIsOpen(false)}
+          />
         </div>
       )}
     </nav>

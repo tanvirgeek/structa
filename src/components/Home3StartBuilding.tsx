@@ -18,7 +18,7 @@ const Home3StartBuilding = () => {
         <h2 className="text-background!">Start Building With</h2>
         <h2 className="text-background!">Confidence Today</h2>
         <div className="flex justify-center mt-4">
-          <Button text={"Get A Quote"} />
+          <Button text={"Get A Quote"} href="/contact" />
         </div>
       </div>
     </div>

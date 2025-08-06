@@ -8,50 +8,59 @@ const Services = () => {
       title: "Construction",
       description:
         "Offering comprehensive architectural services including conceptual design, drafting",
+      href: "/serviceDetails",
     },
     {
       imageSrc: "/arch.png",
       title: "Architecture",
       description:
         "Offering comprehensive architectural services including conceptual design, drafting",
+      href: "/serviceDetails",
     },
     {
       imageSrc: "/interior.png",
       title: "Interior Design",
       description:
         "Offering comprehensive architectural services including conceptual design, drafting",
+      href: "/serviceDetails",
     },
     {
       imageSrc: "/refurbishment.png",
       title: "Refurbishment",
       description:
         "Offering comprehensive architectural services including conceptual design, drafting",
+      href: "/serviceDetails",
     },
     {
       imageSrc: "/construction.png",
       title: "Construction",
       description:
         "Offering comprehensive architectural services including conceptual design, drafting",
+      href: "/serviceDetails",
     },
     {
       imageSrc: "/arch.png",
       title: "Architecture",
       description:
         "Offering comprehensive architectural services including conceptual design, drafting",
+      href: "/serviceDetails",
     },
     {
       imageSrc: "/interior.png",
       title: "Interior Design",
       description:
         "Offering comprehensive architectural services including conceptual design, drafting",
+      href: "/serviceDetails",
     },
     {
       imageSrc: "/refurbishment.png",
       title: "Refurbishment",
       description:
         "Offering comprehensive architectural services including conceptual design, drafting",
+      href: "/serviceDetails",
     },
   ];
+
   return (
     <div>
       <div className="app-section container">

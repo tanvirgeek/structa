@@ -16,7 +16,7 @@ const About = () => {
       <div className="sticky top-0 z-50 bg-background shadow-md">
         <NavigationBar />
       </div>
-      <PageHero heading={`Crafting\nstructures for`} text="Contact With Us" />
+      <PageHero heading={`Crafting\nstructures for`} text="About Us" />
       <PageHeroImage imageUrl={"/aboutUsHero.png"} />
       <AboutDescription />
       <AboutUsMiddle />

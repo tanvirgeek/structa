@@ -15,7 +15,7 @@ const ExcitedToStart = () => {
         <h2 className="text-background!">Excited to start your</h2>
         <h2 className="text-background!">Next Construct?</h2>
         <div className="flex justify-center mt-4">
-          <Button text={"Get A Quote"} />
+          <Button text={"Get A Quote"} href="/contact" />
         </div>
       </div>
     </div>

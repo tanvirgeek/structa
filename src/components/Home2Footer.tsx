@@ -22,7 +22,7 @@ const Home2Footer = () => {
               Building a better <br /> Future with Our Help
             </h3>
             <div className="w-full md:w-auto">
-              <Button text={"Get A Quote"} />
+              <Button text={"Get A Quote"} href="/contact" />
             </div>
           </div>
           <hr className="border-gray-700 mt-4" />

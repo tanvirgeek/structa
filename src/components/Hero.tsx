@@ -14,8 +14,8 @@ const Hero = () => {
           project management deliver excellence.
         </p>
         <div className="flex flex-col md:flex-row gap-4">
-          <Button text="Get a Quote" />
-          <Button text="Our Work" />
+          <Button text={"Get A Quote"} href="/contact" />
+          <Button text="Our Work" href="/projects1" />
         </div>
         <CircularExperts />
       </div>

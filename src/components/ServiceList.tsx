@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import { Service, ServiceProps } from "./Service";
+import Link from "next/link";
 
 const ServicesList: React.FC<{ services: ServiceProps[] }> = ({ services }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -34,7 +35,9 @@ const ServicesList: React.FC<{ services: ServiceProps[] }> = ({ services }) => {
         className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hidden"
       >
         {services.map((item, index) => (
-          <Service key={index} {...item} />
+          <Link href={item.href} key={index}>
+            <Service {...item} />
+          </Link>
         ))}
       </div>
 

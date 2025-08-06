@@ -105,7 +105,11 @@ export default function Home5Nav() {
           />
         ))}
 
-        <Button text="Get a Quote" onClick={() => setIsLeftPanelOpen(false)} />
+        <Button
+          text="Get a Quote"
+          href="/contact"
+          onClick={() => setIsLeftPanelOpen(false)}
+        />
       </div>
 
       {/* Right Panel (for md+ screens) */}

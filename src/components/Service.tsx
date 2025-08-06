@@ -5,6 +5,7 @@ export interface ServiceProps {
   imageSrc: string;
   title: string;
   description: string;
+  href: string;
 }
 
 export const Service: React.FC<ServiceProps> = ({

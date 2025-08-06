@@ -10,6 +10,7 @@ const blogs = [
     category: "Technology",
     date: "May 10, 2025",
     imageUrl: "/blog1.png",
+    href: "/blogDetails",
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ const blogs = [
     category: "Sustainability",
     date: "May 5, 2025",
     imageUrl: "/blog2.png",
+    href: "/blogDetails",
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ const blogs = [
     category: "Innovation",
     date: "April 28, 2025",
     imageUrl: "/blog1.png",
+    href: "/blogDetails",
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ const blogs = [
     category: "Construction Tech",
     date: "April 20, 2025",
     imageUrl: "/blog2.png",
+    href: "/blogDetails",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const blogs = [
     category: "Architecture",
     date: "April 15, 2025",
     imageUrl: "/blog1.png",
+    href: "/blogDetails",
   },
 ];
 
@@ -58,28 +63,27 @@ const BlogPosts = () => {
         {/* Blog List */}
         <div className="grid md:grid-cols-3 gap-6">
           {blogs.map((blog) => (
-            <div
-              key={blog.id}
-              className="bg-background rounded-xl overflow-hidden shadow-sm group"
-            >
-              <div className="w-full h-56 overflow-hidden relative">
-                <Image
-                  src={blog.imageUrl}
-                  alt={blog.title}
-                  width={500}
-                  height={300}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div className="p-4">
-                <div className="flex justify-between text-sm text-muted-foreground">
-                  <span className="text-primary">{blog.category}</span>
-                  <span>{blog.date}</span>
+            <Link href={blog.href} key={blog.id}>
+              <div className="bg-background rounded-xl overflow-hidden shadow-sm group cursor-pointer">
+                <div className="w-full h-56 overflow-hidden relative">
+                  <Image
+                    src={blog.imageUrl}
+                    alt={blog.title}
+                    width={500}
+                    height={300}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
-                <hr className="my-2 border-muted" />
-                <h4>{blog.title}</h4>
+                <div className="p-4">
+                  <div className="flex justify-between text-sm text-muted-foreground">
+                    <span className="text-primary">{blog.category}</span>
+                    <span>{blog.date}</span>
+                  </div>
+                  <hr className="my-2 border-muted" />
+                  <h4>{blog.title}</h4>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
