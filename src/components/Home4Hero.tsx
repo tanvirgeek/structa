@@ -56,7 +56,7 @@ const Home4Hero: React.FC = () => {
           {/* Buttons */}
           <motion.div variants={fadeUp} className="flex gap-4">
             <Button text="Get a Quote" href="/contact" />
-            <Button text="Our Work" variant="outline" />
+            <Button text="Our Work" href="/projects1" variant="outline" />
           </motion.div>
         </div>
 

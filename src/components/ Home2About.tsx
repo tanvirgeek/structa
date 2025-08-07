@@ -25,7 +25,7 @@ const Home2About = () => {
               Crafting your vision. Turning innovative ideas into lasting &
               sustainable structures, with years of expertise
             </h3>
-            <Button text={"Learn More"} />
+            <Button text={"Learn More"} href="/about" />
           </div>
 
           {/* Bottom-right content */}

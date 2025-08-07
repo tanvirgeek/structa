@@ -16,7 +16,7 @@ const AboutDescription = () => {
           is committed to delivering exceptional projects that blend creativity,
           sustainability, and quality craftsmanship.
         </p>
-        <Button text={"Explore Services"} />
+        <Button text={"Explore Services"} href="/services2" />
       </div>
     </div>
   );

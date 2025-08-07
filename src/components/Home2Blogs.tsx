@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
@@ -92,30 +93,29 @@ export default function BlogSlider() {
           className="flex gap-6 overflow-x-auto py-2 scroll-smooth whitespace-nowrap scrollbar-hidden"
         >
           {blogs.map((blog) => (
-            <div
-              key={blog.id}
-              className="bg-background rounded-xl shadow-sm group w-[280px] flex-shrink-0 inline-block"
-            >
-              <div className="w-full h-56 overflow-hidden relative">
-                <Image
-                  src={blog.imageUrl}
-                  alt={blog.title}
-                  width={500}
-                  height={300}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div className="p-4">
-                <div className="flex justify-between text-sm text-muted-foreground">
-                  <span className="text-primary">{blog.category}</span>
-                  <span>{blog.date}</span>
+            <Link key={blog.id} href="/blogDetails">
+              <div className="bg-background rounded-xl shadow-sm group w-[280px] flex-shrink-0 inline-block cursor-pointer">
+                <div className="w-full h-56 overflow-hidden relative">
+                  <Image
+                    src={blog.imageUrl}
+                    alt={blog.title}
+                    width={500}
+                    height={300}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
-                <hr className="my-2 border-muted" />
-                <h4 className="text-base font-semibold leading-snug text-gray-800 break-words whitespace-normal">
-                  {blog.title}
-                </h4>
+                <div className="p-4">
+                  <div className="flex justify-between text-sm text-muted-foreground">
+                    <span className="text-primary">{blog.category}</span>
+                    <span>{blog.date}</span>
+                  </div>
+                  <hr className="my-2 border-muted" />
+                  <h4 className="text-base font-semibold leading-snug text-gray-800 break-words whitespace-normal">
+                    {blog.title}
+                  </h4>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

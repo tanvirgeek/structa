@@ -75,7 +75,7 @@ const Home2Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="hover:text-gray-100">
+                <Link href="/projects2" className="hover:text-gray-100">
                   Projects
                 </Link>
               </li>
@@ -94,31 +94,22 @@ const Home2Footer = () => {
             </h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <Link href="/services/design" className="hover:text-gray-100">
+                <Link href="/serviceDetails" className="hover:text-gray-100">
                   Design & Planning
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services/construction"
-                  className="hover:text-gray-100"
-                >
+                <Link href="/serviceDetails" className="hover:text-gray-100">
                   Construction
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services/renovation"
-                  className="hover:text-gray-100"
-                >
+                <Link href="/serviceDetails" className="hover:text-gray-100">
                   Renovation
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services/consulting"
-                  className="hover:text-gray-100"
-                >
+                <Link href="/serviceDetails" className="hover:text-gray-100">
                   Consulting
                 </Link>
               </li>

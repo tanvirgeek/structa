@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   "Architectural Design",
@@ -23,47 +24,48 @@ const Home4Services = () => {
         {/* Service List */}
         <div className="flex flex-col items-center space-y-6">
           {services.map((service, idx) => (
-            <div
-              key={idx}
-              onMouseEnter={() => setHoveredIndex(idx)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              className="relative group cursor-pointer border-b border-gray-300 pb-4 w-full max-w-xl"
-            >
-              {/* Left Image */}
-              {hoveredIndex === idx && (
-                <div className="absolute -left-20 top-1/2 transform -translate-y-1/2 hidden md:block">
-                  <Image
-                    src="/blog2.png"
-                    alt="Left"
-                    width={80}
-                    height={80}
-                    className="rounded shadow-lg"
-                  />
-                </div>
-              )}
-
-              {/* Right Image */}
-              {hoveredIndex === idx && (
-                <div className="absolute -right-20 top-1/2 transform -translate-y-1/2 hidden md:block">
-                  <Image
-                    src="/blog1.png"
-                    alt="Right"
-                    width={80}
-                    height={80}
-                    className="rounded shadow-lg"
-                  />
-                </div>
-              )}
-
-              {/* Headline */}
-              <h3
-                className={`text-xl font-semibold transition-colors duration-300 ${
-                  hoveredIndex === idx ? "!text-primary" : "text-foreground"
-                }`}
+            <Link href="/serviceDetails" key={idx}>
+              <div
+                onMouseEnter={() => setHoveredIndex(idx)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                className="relative group cursor-pointer border-b border-gray-300 pb-4 w-full max-w-xl"
               >
-                {service}
-              </h3>
-            </div>
+                {/* Left Image */}
+                {hoveredIndex === idx && (
+                  <div className="absolute -left-20 top-1/2 transform -translate-y-1/2 hidden md:block">
+                    <Image
+                      src="/blog2.png"
+                      alt="Left"
+                      width={80}
+                      height={80}
+                      className="rounded shadow-lg"
+                    />
+                  </div>
+                )}
+
+                {/* Right Image */}
+                {hoveredIndex === idx && (
+                  <div className="absolute -right-20 top-1/2 transform -translate-y-1/2 hidden md:block">
+                    <Image
+                      src="/blog1.png"
+                      alt="Right"
+                      width={80}
+                      height={80}
+                      className="rounded shadow-lg"
+                    />
+                  </div>
+                )}
+
+                {/* Headline */}
+                <h3
+                  className={`text-xl font-semibold transition-colors duration-300 ${
+                    hoveredIndex === idx ? "!text-primary" : "text-foreground"
+                  }`}
+                >
+                  {service}
+                </h3>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

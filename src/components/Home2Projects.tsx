@@ -3,11 +3,13 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Link from "next/link";
 
 type Project = {
   imageSrc: string;
   title: string;
   description: string;
+  href: string;
 };
 
 const featuredProjects: Project[] = [
@@ -15,27 +17,32 @@ const featuredProjects: Project[] = [
     imageSrc: "/project1.png",
     title: "North Carolina Centre",
     description: "Building, Renovation",
+    href: "/projectDetails",
   },
   {
     imageSrc: "/project2.png",
     title: "Tranquil Heights Homes",
     description:
       "Offering comprehensive architectural services including conceptual design, drafting",
+    href: "/projectDetails",
   },
   {
     imageSrc: "/project1.png",
     title: "Modern Office Complex",
     description: "Corporate design and execution",
+    href: "/projectDetails",
   },
   {
     imageSrc: "/project2.png",
     title: "Urban Retreat",
     description: "Residential Planning",
+    href: "/projectDetails",
   },
   {
     imageSrc: "/project1.png",
     title: "New Horizons Tower",
     description: "Commercial & residential",
+    href: "/projectDetails",
   },
 ];
 
@@ -74,19 +81,21 @@ export default function ImageSlider() {
       >
         {featuredProjects.map((project, index) => (
           <div key={index} className="flex-none w-[400px]">
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image
-                src={project.imageSrc}
-                alt={project.title}
-                fill
-                className="object-cover"
-                sizes="400px"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-foreground/60 text-background p-4">
-                <h3 className="!text-primary font-bold">{project.title}</h3>
-                <p className="text-sm">{project.description}</p>
+            <Link href={project.href}>
+              <div className="relative h-[400px] rounded-lg overflow-hidden cursor-pointer">
+                <Image
+                  src={project.imageSrc}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  sizes="400px"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-foreground/60 text-background p-4">
+                  <h3 className="!text-primary font-bold">{project.title}</h3>
+                  <p className="text-sm">{project.description}</p>
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
       </div>

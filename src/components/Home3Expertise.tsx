@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
@@ -43,21 +44,23 @@ const Home3Expertise = () => {
       {/* Right Side */}
       <div className="w-full md:w-2/3 grid grid-cols-1 gap-6 md:grid-cols-2">
         {services.map((service, index) => (
-          <div key={index} className="flex flex-col gap-4 items-start">
-            <Image
-              src={service.imageSrc}
-              alt={service.title}
-              width={60}
-              height={60}
-              className="rounded-md"
-            />
-            <div>
-              <h3 className="!text-sm md:!text-lg font-bold">
-                {service.title}
-              </h3>
-              <p className="text-gray-500">{service.description}</p>
+          <Link href="/serviceDetails" key={index}>
+            <div className="flex flex-col gap-4 items-start cursor-pointer">
+              <Image
+                src={service.imageSrc}
+                alt={service.title}
+                width={60}
+                height={60}
+                className="rounded-md"
+              />
+              <div>
+                <h3 className="!text-sm md:!text-lg font-bold">
+                  {service.title}
+                </h3>
+                <p className="text-gray-500">{service.description}</p>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

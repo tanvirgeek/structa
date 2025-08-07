@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
@@ -77,23 +78,24 @@ const Home4FeaturedProjects = () => {
           className="md:w-2/3 w-full overflow-x-auto whitespace-nowrap scrollbar-hidden"
         >
           {featuredProjects.map((project, idx) => (
-            <div
-              key={idx}
-              className="inline-block w-[280px] md:w-[350px] mr-6 align-top whitespace-normal break-words"
-            >
-              <div className="relative w-full h-[200px] md:h-[250px] rounded overflow-hidden mb-3">
-                <Image
-                  src={project.imageSrc}
-                  alt={project.title}
-                  fill
-                  className="object-cover rounded"
-                />
+            <Link href="/projectDetails" key={idx}>
+              <div className="inline-block w-[280px] md:w-[350px] mr-6 align-top whitespace-normal break-words cursor-pointer">
+                <div className="relative w-full h-[200px] md:h-[250px] rounded overflow-hidden mb-3">
+                  <Image
+                    src={project.imageSrc}
+                    alt={project.title}
+                    fill
+                    className="object-cover rounded"
+                  />
+                </div>
+                <h3 className="!text-background break-words">
+                  {project.title}
+                </h3>
+                <p className="!text-background break-words">
+                  {project.description}
+                </p>
               </div>
-              <h3 className="!text-background break-words">{project.title}</h3>
-              <p className="!text-background break-words">
-                {project.description}
-              </p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

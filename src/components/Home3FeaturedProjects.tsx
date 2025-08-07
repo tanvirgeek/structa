@@ -39,7 +39,7 @@ const Home3FeaturedProjects: React.FC = () => {
           <h6>Recent Projects</h6>
           <h2>Featured Projects</h2>
           <Link
-            href="/projects"
+            href="/projects1"
             className="block mt-4 text-foreground hover:underline text-sm"
           >
             View All Projects
@@ -53,7 +53,7 @@ const Home3FeaturedProjects: React.FC = () => {
             <h2>Featured Projects</h2>
           </div>
           <Link
-            href="/projects"
+            href="/projects2"
             className="absolute right-0 -bottom-2 text-foreground hover:underline text-sm"
           >
             View All Projects
@@ -64,26 +64,23 @@ const Home3FeaturedProjects: React.FC = () => {
       {/* Grid Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {featuredProjects.map((project, index) => (
-          <div
-            key={index}
-            className={`relative overflow-hidden shadow-md ${
-              index === 0 || index === 3
-                ? "row-span-1 h-80 md:h-80"
-                : "row-span-2 h-80 md:h-120"
-            }`}
-          >
-            <Image
-              src={project.imageSrc}
-              alt={project.title}
-              layout="fill"
-              objectFit="cover"
-              className=""
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-background p-4">
-              <h4>{project.title}</h4>
-              <p>{project.description}</p>
+          <Link href="/projectDetails" key={index}>
+            <div
+              className={`relative overflow-hidden shadow-md cursor-pointer ${"row-span-2 h-80 md:h-120"}`}
+            >
+              <Image
+                src={project.imageSrc}
+                alt={project.title}
+                layout="fill"
+                objectFit="cover"
+                className=""
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-background p-4">
+                <h4>{project.title}</h4>
+                <p>{project.description}</p>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
