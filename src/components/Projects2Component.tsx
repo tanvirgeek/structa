@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 type Project = {
   title: string;
@@ -92,9 +93,10 @@ const Projects2Component = () => {
         {/* Masonry Style Grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
           {filteredProjects.map((project, index) => (
-            <div
+            <Link
               key={index}
-              className="break-inside-avoid bg-white rounded-lg shadow-md overflow-hidden"
+              href="/projectDetails"
+              className="break-inside-avoid bg-white rounded-lg shadow-md overflow-hidden block"
             >
               <div className="relative w-full h-[300px]">
                 <Image
@@ -108,7 +110,7 @@ const Projects2Component = () => {
                 <h3 className="text-xl font-semibold">{project.title}</h3>
                 <p className="text-sm text-gray-500">{project.category}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

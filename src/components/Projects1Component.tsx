@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 type Project = {
   title: string;
@@ -101,9 +102,10 @@ const Projects2Component = () => {
         {/* Masonry Columns - max 2 */}
         <div className="columns-1 md:columns-2 gap-4 space-y-4">
           {filteredProjects.map((project, index) => (
-            <div
+            <Link
               key={index}
-              className="break-inside-avoid rounded-lg overflow-hidden shadow-md bg-background"
+              href="/projectDetails"
+              className="break-inside-avoid rounded-lg overflow-hidden shadow-md bg-background block"
             >
               <div
                 className="relative w-full"
@@ -122,7 +124,7 @@ const Projects2Component = () => {
                 </h3>
                 <p className="text-sm text-foreground">{project.category}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

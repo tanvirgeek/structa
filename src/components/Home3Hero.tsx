@@ -20,7 +20,7 @@ const heroData = [
     title: "Innovating Tomorrow's <br/> Landmarks",
     paragraph:
       "Our strategies empower businesses to achieve more in a competitive landscape.",
-    buttonText: "Contact Us",
+    buttonText: "Get a Quote",
     backgroundImage: "/Hero3.png",
   },
   {
@@ -28,7 +28,7 @@ const heroData = [
     title: "Crafting Spaces <br/> That Inspire",
     paragraph:
       "Partner with us to create eco-friendly and impactful solutions.",
-    buttonText: "Learn More",
+    buttonText: "Get a Quote",
     backgroundImage: "/Hero3.png",
   },
 ];
@@ -107,7 +107,7 @@ export default function Home3Hero() {
           </div>
 
           <span className="mt-4 sm:mt-0 sm:ml-4">
-            <Button text={currentHero.buttonText} />
+            <Button text={currentHero.buttonText} href="/contact" />
           </span>
         </div>
 

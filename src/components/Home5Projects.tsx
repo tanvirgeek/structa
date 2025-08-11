@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const featuredProjects = [
   {
@@ -33,8 +34,9 @@ const Home5Projects: React.FC = () => {
     <section className="app-section">
       <div className="flex gap-6 px-4 overflow-scroll scrollbar-hidden">
         {featuredProjects.map((project, index) => (
-          <div
+          <Link
             key={index}
+            href="/projectDetails"
             className="relative w-[440px] h-[500px] flex-shrink-0 overflow-hidden group rounded-xl shadow-lg"
           >
             <Image
@@ -49,7 +51,7 @@ const Home5Projects: React.FC = () => {
               <h4 className="!text-background">{project.title}</h4>
               <p className="!text-background">{project.description}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

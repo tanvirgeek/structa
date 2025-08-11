@@ -72,7 +72,11 @@ const BlogsComponent = () => {
       <div className="container">
         <div className="grid gap-8">
           {currentBlogs.map((blog) => (
-            <div key={blog.id} className="bg-background rounded-xl shadow p-4">
+            <Link
+              key={blog.id}
+              href="/blogDetails"
+              className="bg-background rounded-xl shadow p-4 block hover:shadow-lg transition-shadow duration-300"
+            >
               {/* Image */}
               <div className="relative w-full md:h-100 h-64 rounded-lg overflow-hidden mb-4">
                 <Image
@@ -101,13 +105,10 @@ const BlogsComponent = () => {
               <p className="text-foreground mb-4">{blog.description}</p>
 
               {/* Read More */}
-              <Link
-                href={`/blog/${blog.id}`}
-                className="text-primary font-medium hover:underline"
-              >
+              <span className="text-primary font-medium hover:underline">
                 Read more →
-              </Link>
-            </div>
+              </span>
+            </Link>
           ))}
         </div>
 

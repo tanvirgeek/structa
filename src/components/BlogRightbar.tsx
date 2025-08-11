@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const BlogRightbar = () => {
@@ -80,8 +81,9 @@ const BlogRightbar = () => {
               date: "Apr 28, 2025",
             },
           ].map((post) => (
-            <li
+            <Link
               key={post.id}
+              href="/blogDetails"
               className="flex items-center gap-3 cursor-pointer"
             >
               <img
@@ -93,7 +95,7 @@ const BlogRightbar = () => {
                 <h4 className="leading-tight">{post.title}</h4>
                 <p className="text-xs text-muted-foreground">{post.date}</p>
               </div>
-            </li>
+            </Link>
           ))}
         </ul>
       </div>
