@@ -63,7 +63,7 @@ export default function PageLoader() {
               style={{ width: 96, height: 96 }}
             >
               <Image
-                src="/logo-White.png"
+                src="/Logo-White.png"
                 alt="Logo"
                 width={96}
                 height={96}
