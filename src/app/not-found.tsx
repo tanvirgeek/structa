@@ -8,7 +8,7 @@ const NotFoundPage = () => {
       className="relative h-screen bg-cover bg-center"
       style={{ backgroundImage: "url('/404.png')" }} // Replace with your actual image path
     >
-      <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-md shadow-md">
+      <div className="sticky top-0 z-50 bg-background shadow-md">
         <Home2Navbar />
       </div>
       <div className="flex items-center flex-col gap-4 mt-16 text-center">

@@ -11,6 +11,7 @@ const Home2Hero = () => {
         <div className="flex gap-5 items-center">
           <AnimatedHeading lines={["Innovative"]} />
           <Image
+            className="hidden md:block"
             src="/Innovative.png"
             alt="Innovation Image"
             width={250}

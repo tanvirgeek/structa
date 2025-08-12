@@ -18,7 +18,7 @@ const ProjectDescription = () => {
   ];
 
   return (
-    <section className="container my-12 space-y-12">
+    <section className="container app-section">
       {/* Heading + Description */}
       <div className="md:flex md:items-start md:gap-12">
         {/* Left Column */}

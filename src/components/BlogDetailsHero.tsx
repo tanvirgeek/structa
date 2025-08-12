@@ -22,7 +22,7 @@ const BlogDetailsHero = () => {
   };
 
   return (
-    <section className="container my-10">
+    <section className="container app-section">
       {/* Blog Title and Path */}
       <div className="mb-6">
         <h2 className="">{blog.title}</h2>

@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Space_Grotesk, Inria_Sans } from "next/font/google";
+import PageLoader from "@/components/PageLoader";
+import RouteChangeLoader from "@/components/RouteChangeLoader";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"], // Available weights
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const inriaSans = Inria_Sans({
   variable: "--font-inria-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "700"], // Available weights
+  weight: ["300", "400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -21,17 +23,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
-        className={`${spaceGrotesk.variable} ${inriaSans.variable} antialiased`}
+        className={`${spaceGrotesk.variable} ${inriaSans.variable} antialiased relative`}
       >
-        {/* You should add selected navbar here */}
-        <div>{children}</div>
-        {/* You should add selected footer here */}
+        <RouteChangeLoader />
+        <PageLoader />
+        {children}
       </body>
     </html>
   );
